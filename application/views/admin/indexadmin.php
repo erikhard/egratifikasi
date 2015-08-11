@@ -18,7 +18,7 @@
 <!--Tabel anak untuk data buku-->
 	<table width="90%" align="center">
 	<tr><td width="140"><a href="<?=base_url()?>index.php/c_berita/">BERITA</a> </td><tr>
-	<tr valign="center"><td><a href="<?=base_url()?>index.php/c_slide/">SLIDE</a> </td></td><tr>
+	<tr valign="center"><td><a href="<?=base_url()?>index.php/c_slide/">SLIDER</a> </td></td><tr>
 	</table>
 <!-- akhir tabel data buku-->
 </td></tr>
