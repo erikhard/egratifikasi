@@ -1,0 +1,34 @@
+body{font-family: Arial,Helvetica,sans-serif;background-color: #F0F0F0; font-size: 12px;}
+h1{color:#072936;}
+.wrapper { margin: 0 auto; width: 730px; }
+
+#tolak_table_wrapper {background-color: #fff; }
+#tolak_table_wrapper .dataTables_length {float:left;}
+#tolak_table_wrapper .dataTables_filter {float:right;}
+#tolak_table_wrapper .ui-toolbar{padding:5px;}
+#tolak_table_wrapper .ui-toolbar{padding:5px;}
+#tolak_table{width:100%; text-align: center;}
+.dataTables_paginate .ui-button {    margin-right: -0.1em !important;}
+.paging_full_numbers .ui-button {    color: #333333 !important;    cursor: pointer;    margin: 0;    padding: 2px 6px;}
+.dataTables_info {    float: left;    width: 50%;}
+.dataTables_info {    padding-top: 3px;}
+.dataTables_paginate {    float: right;    text-align: right;}
+.dataTables_paginate {    width: auto;}
+.paging_full_numbers {    width: 350px !important;}
+#tolak_table_processing > img {padding-left:20px;}
+
+#terima_table_wrapper {background-color: #fff; }
+#terima_table_wrapper .dataTables_length {float:left;}
+#terima_table_wrapper .dataTables_filter {float:right;}
+#terima_table_wrapper .ui-toolbar{padding:5px;}
+#terima_table_wrapper .ui-toolbar{padding:5px;}
+#terima_table{width:100%; text-align: center;}
+#terima_table_processing > img {padding-left:20px;}
+
+#log_table_wrapper {background-color: #fff; }
+#log_table_wrapper .dataTables_length {float:left;}
+#log_table_wrapper .dataTables_filter {float:right;}
+#log_table_wrapper .ui-toolbar{padding:5px;}
+#log_table_wrapper .ui-toolbar{padding:5px;}
+#log_table{width:100%; text-align: center;}
+#log_table_processing > img {padding-left:20px;}

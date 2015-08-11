@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html class="js" prefix="og: http://ogp.me/ns#" lang="en-US"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="google-site-verification" content="hstrBNnjo0cv_L7Cu_7WM-HO4JlgZhq1erNNn3Oj8dg">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="http://harviacode.com/xmlrpc.php">
+	
+	<title>Menampilkan data dengan datatables - HarviaCode.com</title>
+<script src="Menampilkan%20data%20dengan%20datatables%20-%20HarviaCode.com_files/sdk.js" id="facebook-jssdk"></script><script src="Menampilkan%20data%20dengan%20datatables%20-%20HarviaCode.com_files/page.js" async="" type="text/javascript"></script><script>document.documentElement.className = document.documentElement.className.replace("no-js","js");</script>
+
+<!-- This site is optimized with the Yoast WordPress SEO plugin v2.2 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="datatables, datatable, menggunakan datatable, contoh datatables">
+<link rel="canonical" href="http://harviacode.com/2015/01/15/menampilkan-data-dengan-datatables/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Menampilkan data dengan datatables - HarviaCode.com">
+<meta property="og:description" content="datatables, datatable, menggunakan datatable, contoh datatables">
+<meta property="og:url" content="http://harviacode.com/2015/01/15/menampilkan-data-dengan-datatables/">
+<meta property="og:site_name" content="HarviaCode.com">
+<meta property="article:tag" content="datatables">
+<meta property="article:section" content="serba-serbi">
+<meta property="article:published_time" content="2015-01-15T08:50:24+00:00">
+<meta property="article:modified_time" content="2015-01-19T08:45:56+00:00">
+<meta property="og:updated_time" content="2015-01-19T08:45:56+00:00">
+<meta property="og:image" content="http://harviacode.com/wp-content/uploads/2015/01/datatables.png">
+<!-- / Yoast WordPress SEO plugin. -->
+
+<link rel="alternate" type="application/rss+xml" title="HarviaCode.com » Feed" href="http://harviacode.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="HarviaCode.com » Comments Feed" href="http://harviacode.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="HarviaCode.com » Menampilkan data dengan datatables Comments Feed" href="http://harviacode.com/2015/01/15/menampilkan-data-dengan-datatables/feed/">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/harviacode.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.2.2"}};
+			!function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&&c.getContext("2d");return d&&d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56812,55356,56807),0,0),c.toDataURL().length>3e3):(d.fillText(String.fromCharCode(55357,56835),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script type="text/javascript" src="Menampilkan%20data%20dengan%20datatables%20-%20HarviaCode.com_files/wp-emoji-release.js"></script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" id="crayon-css" href="Menampilkan%20data%20dengan%20datatables%20-%20HarviaCode.com_files/crayon.css" type="text/css" media="all">
+<link rel="stylesheet" id="crayon-theme-github-css" href="Menampilkan%20data%20dengan%20datatables%20-%20HarviaCode.com_files/github.css" type="text/css" media="all">
+<link rel="stylesheet" id="crayon-font-monaco-css" href="Menampilkan%20data%20dengan%20datatables%20-%20HarviaCode.com_files/monaco.css" type="text/css" media="all">
+<link rel="stylesheet" id="contact-form-7-css" href="Menampilkan%20data%20dengan%20datatables%20-%20HarviaCode.com_files/styles.css" type="text/css" media="all">
+<link rel="stylesheet" id="arevico_scsfbcss-css" href="Menampilkan%20data%20dengan%20datatables%20-%20HarviaCode.com_files/scs.css" type="text/css" media="all">
+<link rel="stylesheet" id="responsive-lightbox-swipebox-css" href="Menampilkan%20data%20dengan%20datatables%20-%20HarviaCode.com_files/swipebox.css" type="text/css" media="all">
+<style id="responsive-lightbox-swipebox-inline-css" type="text/css">
+#swipebox-action #swipebox-close, #swipebox-action #swipebox-prev, #swipebox-action #swipebox-next { background-image: url('assets/swipebox/source/img/icons.png') !important; }
+</style>
+<link rel="stylesheet" id="style-css" href="Menampilkan%20data%20dengan%20datatables%20-%20HarviaCode.com_files/style.css" type="text/css" media="all">
+<link rel="stylesheet" id="responsive-css" href="Menampilkan%20data%20dengan%20datatables%20-%20HarviaCode.com_files/responsive.css" type="text/css" media="all">
+<link rel="stylesheet" id="font-awesome-css" href="Menampilkan%20data%20dengan%20datatables%20-%20HarviaCode.com_files/font-awesome.css" type="text/css" media="all">
+<link rel="stylesheet" id="A2A_SHARE_SAVE-css" href="Menampilkan%20data%20dengan%20datatables%20-%20HarviaCode.com_files/addtoany.css" type="text/css" media="all">
+<style id="A2A_SHARE_SAVE-inline-css" type="text/css">
+@media screen and (max-width:980px){
+.a2a_floating_style.a2a_vertical_style{display:none;}
+}
+@media screen and (min-width:981px){
+.a2a_floating_style.a2a_default_style{display:none;}
+}
+</style>
+<script type="text/javascript" src="Menampilkan%20data%20dengan%20datatables%20-%20HarviaCode.com_files/jquery_002.js"></script>
+<script type="text/javascript" src="Menampilkan%20data%20dengan%20datatables%20-%20HarviaCode.com_files/jquery-migrate.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var CrayonSyntaxSettings = {"version":"2.7.1","is_admin":"0","ajaxurl":"http:\/\/harviacode.com\/wp-admin\/admin-ajax.php","prefix":"crayon-","setting":"crayon-setting","selected":"crayon-setting-selected","changed":"crayon-setting-changed","special":"crayon-setting-special","orig_value":"data-orig-value","debug":""};
+var CrayonSyntaxStrings = {"copy":"Press %s to Copy, %s to Paste","minimize":"Click To Expand Code"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="Menampilkan%20data%20dengan%20datatables%20-%20HarviaCode.com_files/crayon.js"></script>
+<script type="text/javascript" src="Menampilkan%20data%20dengan%20datatables%20-%20HarviaCode.com_files/scs.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var lb_l_ret = {"width":"400","height":"255","delay":"2000","coc":"0","fb_id":"1511333702422662","cooc":"0","install_date":"1432950723","display_on_page":"1","display_on_post":"1","display_on_homepage":"1","display_on_archive":"1","show_once":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="Menampilkan%20data%20dengan%20datatables%20-%20HarviaCode.com_files/launch.js"></script>
+<script type="text/javascript" src="Menampilkan%20data%20dengan%20datatables%20-%20HarviaCode.com_files/jquery_003.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var rlArgs = {"script":"swipebox","selector":"lightbox","custom_events":"","activeGalleries":"1","animation":"1","hideCloseButtonOnMobile":"0","hideBars":"1","hideBarsDelay":"5000","videoMaxWidth":"1080","useSVG":"1","loopAtEnd":"0"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="Menampilkan%20data%20dengan%20datatables%20-%20HarviaCode.com_files/front.js"></script>
+<script type="text/javascript" src="Menampilkan%20data%20dengan%20datatables%20-%20HarviaCode.com_files/jquery_004.js"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://harviacode.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://harviacode.com/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 4.2.2">
+<link rel="shortlink" href="http://harviacode.com/?p=419">
+
+<script type="text/javascript"><!--
+var a2a_config=a2a_config||{},wpa2a={done:false,html_done:false,script_ready:false,script_load:function(){var a=document.createElement('script'),s=document.getElementsByTagName('script')[0];a.type='text/javascript';a.async=true;a.src='http://static.addtoany.com/menu/page.js';s.parentNode.insertBefore(a,s);wpa2a.script_load=function(){};},script_onready:function(){if(a2a.type=='page'){wpa2a.script_ready=true;if(wpa2a.html_done)wpa2a.init();}},init:function(){for(var i=0,el,target,targets=wpa2a.targets,length=targets.length;i<length;i++){el=document.getElementById('wpa2a_'+(i+1));target=targets[i];a2a_config.linkname=target.title;a2a_config.linkurl=target.url;if(el){a2a.init('page',{target:el});el.id='';}wpa2a.done=true;}wpa2a.targets=[];}};a2a_config.callbacks=a2a_config.callbacks||[];a2a_config.callbacks.push({ready:wpa2a.script_onready});
+//--></script>
+<!--[if lt IE 9]>
+<script src="http://harviacode.com/wp-content/themes/hueman/js/ie/html5.js"></script>
+<script src="http://harviacode.com/wp-content/themes/hueman/js/ie/selectivizr.js"></script>
+<![endif]-->
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+<style type="text/css">
+/* Dynamic CSS: For no styles in head, copy and put the css below in your child theme's style.css, disable dynamic styles */
+</style>
+<script src="Menampilkan%20data%20dengan%20datatables%20-%20HarviaCode.com_files/request" async="" type="text/javascript"></script><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_close_icon:active{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_loader{background-color:#f6f7f8;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3a5795;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #2f477a;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f6f7f8;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}</style><style type="text/css">.a2a_menu,.a2a_menu * {-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;float:none;margin:0;padding:0;position: static;height:auto;width:auto;}.a2a_menu {border-radius: 6px;display:none;direction:ltr;background:#FFF;font: 16px sans-serif-light, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Arial, Helvetica, "Liberation Sans", sans-serif;color:#000;line-height:12px;border: 1px solid #CCC;vertical-align:baseline;overflow:hidden;}.a2a_mini {min-width:200px;position:absolute;width: 300px;z-index:9999997;}.a2a_overlay {display: none;background: #CCC; _height: expression( ((e=document.documentElement.clientHeight)?e:document.body.clientHeight)+"px" ); _width: expression( ((e=document.documentElement.clientWidth)?e:document.body.clientWidth)+"px" ); filter: alpha(opacity=50); opacity: .7;position: fixed;_position: absolute; top: 0;right: 0;left: 0;bottom: 0;z-index: 9999998;-webkit-animation: a2aFadeInOverlay .14s ease-out;animation: a2aFadeInOverlay .14s ease-out;}.a2a_full {background: #FFF;height: auto;height: calc(320px);top: 15%;_top: expression(40+((e=document.documentElement.scrollTop)?e:document.body.scrollTop)+"px"); left: 50%;margin-left: -320px; position: fixed;_position: absolute; text-align: center;width: 640px;z-index: 9999999; -webkit-animation: a2aFadeIn .14s ease-in;    animation: a2aFadeIn .14s ease-in;}.a2a_full_header,.a2a_full_services,.a2a_full_footer {border: 0;margin: 0;padding: 12px;box-sizing: border-box;}.a2a_full_header {padding-bottom: 8px;}.a2a_full_services {height: 280px; overflow-y: scroll;padding: 0 12px;-webkit-overflow-scrolling: touch;}.a2a_full_services .a2a_i {display: inline-block;float: none;width: 181px;width: calc(33.334% - 18px);}div.a2a_full_footer {font-size: 12px;text-align: center;padding: 8px 14px;}div.a2a_full_footer a,div.a2a_full_footer a:visited {display: inline;font-size: 12px;line-height:14px;padding: 8px 14px; }div.a2a_full_footer a:hover {background: none;border: 0;color: #0166FF;}div.a2a_full_footer a span.a2a_s_a2a,div.a2a_full_footer a span.a2a_w_a2a {background-size: 14px;border-radius: 3px;display: inline-block;height:14px;line-height:14px;margin: 0 3px 0 0;vertical-align: top;*vertical-align: middle; width:14px;}@media print {.a2a_menu,.a2a_overlay {visibility: hidden;}}@-webkit-keyframes a2aFadeIn {from { opacity: 0; }  to { opacity: 1; }}@keyframes a2aFadeIn {from { opacity: 0; }  to { opacity: 1; }}@-webkit-keyframes a2aFadeInOverlay {from { opacity: 0; }  to { opacity: .7; }}@keyframes a2aFadeInOverlay {from { opacity: 0; }  to { opacity: .7; }}@media (max-width: 639px) {.a2a_full {top: 15%;left: 0;margin-left: auto;width: 100%;}}@media (min-width: 318px) and (max-width: 437px) {.a2a_full .a2a_full_services .a2a_i {width: calc(50% - 18px);}}@media (max-width: 317px) {.a2a_full .a2a_full_services .a2a_i {width: calc(100% - 18px);}}@media (max-height: 436px) {.a2a_full {bottom: 40px;height: auto;top: 40px;}}.a2a_menu a {color:#0166FF;text-decoration:none;font: 16px sans-serif-light, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Arial, Helvetica, "Liberation Sans", sans-serif;line-height:14px;height:auto;width:auto;outline:none;-moz-outline:none;}.a2a_menu a:visited{color:#0166FF}.a2a_menu a:hover,.a2a_menu a:active,.a2a_menu a.a2a_i:focus{color:#2A2A2A;border:1px solid #EEE;background-color:#EEE;text-decoration:none}.a2a_menu span.a2a_s_find {background-size: 24px;height:24px;left: 8px;position:absolute;top: 7px;width:24px;}.a2a_menu span.a2a_s_find svg {background-color: #FFF;}.a2a_menu span.a2a_s_find svg path {fill: #CCC;}#a2a_menu_container{display:inline-block} #a2a_menu_container{_display:inline} .a2a_menu_title_container {padding: 6px 8px;}.a2a_menu_find_container {border: 1px solid #CCC;border-radius: 6px;padding: 2px 24px 2px 0;position: relative;text-align: left;}.a2a_cols_container .a2a_col1{overflow-x:hidden;overflow-y:auto;-webkit-overflow-scrolling:touch}.a2a_menu input, .a2a_menu input[type="text"]{display:block;background-image:none;box-shadow:none;line-height:100%;margin:0;overflow:hidden;padding:0;-moz-box-shadow:none;-webkit-box-shadow:none;-webkit-appearance:none} .a2a_menu_title_container input.a2a_menu_title {background-color: #FFF;border: 0;color: #2A2A2A;font: inherit;margin: 0;padding: 0;width: 99%;}.a2a_menu_find_container input.a2a_menu_find {background-color: transparent;_background-color: #FFF;border: 0;color: #2A2A2A;font: inherit;font-size: 16px;height: 28px;line-height: 20px;left: 38px;outline: 0;padding: 2px 0;position: relative;width: 99%;}.a2a_clear{clear:both} .a2a_img {background:url(http://static.addtoany.com/menu/icons.32.png);border:0;line-height:16px}.a2a_img,.a2a_svg {background-repeat:no-repeat;display:block;overflow:hidden;}.a2a_img{height:16px;line-height:16px;width:16px;}.a2a_svg{height:32px;line-height:32px;width:32px;}a.a2a_i,i.a2a_i{display:block;float:left;border:1px solid #FFF;line-height:24px;padding:6px 8px;text-align:left;white-space:nowrap;overflow: hidden;text-overflow: ellipsis;width:132px;}a.a2a_i span,a.a2a_more span {display: inline-block;overflow: hidden;vertical-align: top;*vertical-align: middle; }a.a2a_i .a2a_img,a.a2a_i .a2a_svg {margin: 0 6px 0 0;}a.a2a_i .a2a_svg,a.a2a_more .a2a_svg {background-size: 24px;height:24px;line-height:24px;width:24px;}a.a2a_sss:hover {border-left: 1px solid #CCC;}a.a2a_menu_show_more_less{border-bottom:1px solid #FFF;border-left:0;border-right:0;line-height:24px;margin:6px 0 0;padding:6px}a.a2a_menu_show_more_less span{display:inline-block;height:24px;margin:0 6px 0 0;} .a2a_kit .a2a_svg { background-repeat: repeat; }.a2a_default_style a{float:left;line-height:16px;padding:0 2px}.a2a_default_style a:hover .a2a_img,.a2a_default_style a:hover .a2a_svg,.a2a_floating_style a:hover .a2a_img,.a2a_floating_style a:hover .a2a_svg {opacity: .7;}.a2a_default_style .a2a_count,.a2a_default_style .a2a_svg,.a2a_floating_style .a2a_svg,.a2a_menu .a2a_svg {border-radius:4px ;} .a2a_default_style .a2a_img, .a2a_default_style .a2a_dd, .a2a_default_style .a2a_svg{float:left}.a2a_default_style .a2a_img_text{margin-right:4px}.a2a_default_style .a2a_divider{border-left:1px solid #000;display:inline;float:left;height:16px;line-height:16px;margin:0 5px}.a2a_kit a{cursor:pointer}.a2a_floating_style { background-color: #fff; border-radius: 6px; padding: 4px; position: fixed; z-index: 9999995; }.a2a_vertical_style a { display: block; padding: 4px; }.a2a_floating_style.a2a_default_style { bottom: 0; }.a2a_floating_style.a2a_default_style a { padding: 4px; }.a2a_count {background-color: #fff;border: 1px solid #ccc;box-sizing: border-box;color: #2a2a2a;display: block;float: left;font: 12px Arial,Helvetica,sans-serif;height: 16px;margin-left: 4px;position: relative;text-align: center;width: 50px;}.a2a_count:before,.a2a_count:after {border: solid transparent;border-width: 4px 4px 4px 0;content: "";height: 0;left: 0;line-height: 0;margin: -4px 0 0 -4px;position: absolute;top: 50%;width: 0;}.a2a_count:before {border-right-color: #ccc;}.a2a_count:after {border-right-color: #fff;margin-left: -3px;}.a2a_count span {-webkit-animation: a2aFadeIn .14s ease-in;    animation: a2aFadeIn .14s ease-in;}.a2a_nowrap{white-space:nowrap}.a2a_note{margin:0 auto;padding:9px;font-size:12px;text-align:center}.a2a_note .a2a_note_note{margin:0;color:#2A2A2A}.a2a_wide a{display:block;margin-top:3px;border-top:1px solid #EEE;text-align:center}iframe.a2a_shim {background-color: transparent;border: 0;bottom: 0;filter: alpha(opacity=0); height: 100%;left: 0;right: 0;top: 0;position: absolute;width: 100%;z-index: 9999996;_height: expression( ((e=document.documentElement.clientHeight)?e:document.body.clientHeight)+"px" ); _width: expression( ((e=document.documentElement.clientWidth)?e:document.body.clientWidth)+"px" ); }.a2a_dd img {border:0;-ms-touch-action:manipulation;}iframe[id^="PIN_"][id$="_nag"] {display: none !important;}.a2a_i_a2a{background-position:0 0!important}.a2a_i_a2a_sm{background-position:0 -17px!important}.a2a_i_agregator{background-position:0 -34px!important}.a2a_i_aim{background-position:0 -51px!important}.a2a_i_amazon{background-position:0 -68px!important}.a2a_i_aol{background-position:0 -85px!important}.a2a_i_app_net{background-position:0 -102px!important}.a2a_i_baidu{background-position:0 -119px!important}.a2a_i_balatarin{background-position:0 -136px!important}.a2a_i_behance{background-position:0 -153px!important}.a2a_i_bibsonomy{background-position:0 -170px!important}.a2a_i_bitty{background-position:0 -187px!important}.a2a_i_blinklist{background-position:0 -204px!important}.a2a_i_blogger{background-position:0 -221px!important}.a2a_i_blogmarks{background-position:0 -238px!important}.a2a_i_bookmark{background-position:0 -255px!important}.a2a_i_bookmarks_fr{background-position:0 -272px!important}.a2a_i_box{background-position:0 -289px!important}.a2a_i_buddymarks{background-position:0 -306px!important}.a2a_i_buffer{background-position:0 -323px!important}.a2a_i_care2{background-position:0 -340px!important}.a2a_i_chrome{background-position:0 -357px!important}.a2a_i_citeulike{background-position:0 -374px!important}.a2a_i_dailyrotation{background-position:0 -391px!important}.a2a_i_default{background-position:0 -408px!important}.a2a_i_delicious{background-position:0 -425px!important}.a2a_i_designfloat{background-position:0 -442px!important}.a2a_i_diary_ru{background-position:0 -459px!important}.a2a_i_diaspora{background-position:0 -476px!important}.a2a_i_digg{background-position:0 -493px!important}.a2a_i_dihitt{background-position:0 -510px!important}.a2a_i_diigo{background-position:0 -527px!important}.a2a_i_dzone{background-position:0 -544px!important}.a2a_i_email{background-position:0 -561px!important}.a2a_i_evernote{background-position:0 -578px!important}.a2a_i_facebook{background-position:0 -595px!important}.a2a_i_fark{background-position:0 -612px!important}.a2a_i_feed{background-position:0 -629px!important}.a2a_i_feedblitz{background-position:0 -646px!important}.a2a_i_feedbucket{background-position:0 -663px!important}.a2a_i_feedly{background-position:0 -680px!important}.a2a_i_feedmailer{background-position:0 -697px!important}.a2a_i_find{background-position:0 -714px!important}.a2a_i_firefox{background-position:0 -731px!important}.a2a_i_flickr{background-position:0 -748px!important}.a2a_i_flipboard{background-position:0 -765px!important}.a2a_i_folkd{background-position:0 -782px!important}.a2a_i_foursquare{background-position:0 -799px!important}.a2a_i_gmail{background-position:0 -816px!important}.a2a_i_google{background-position:0 -833px!important}.a2a_i_google_plus{background-position:0 -850px!important}.a2a_i_hatena{background-position:0 -867px!important}.a2a_i_instagram{background-position:0 -884px!important}.a2a_i_instapaper{background-position:0 -901px!important}.a2a_i_itunes{background-position:0 -918px!important}.a2a_i_jamespot{background-position:0 -935px!important}.a2a_i_kakao{background-position:0 -952px!important}.a2a_i_kindle{background-position:0 -969px!important}.a2a_i_klipfolio{background-position:0 -986px!important}.a2a_i_line{background-position:0 -1003px!important}.a2a_i_linkedin{background-position:0 -1020px!important}.a2a_i_livejournal{background-position:0 -1037px!important}.a2a_i_mail_ru{background-position:0 -1054px!important}.a2a_i_mendeley{background-position:0 -1071px!important}.a2a_i_meneame{background-position:0 -1088px!important}.a2a_i_miro{background-position:0 -1105px!important}.a2a_i_mixi{background-position:0 -1122px!important}.a2a_i_myspace{background-position:0 -1139px!important}.a2a_i_netlog{background-position:0 -1156px!important}.a2a_i_netvibes{background-position:0 -1173px!important}.a2a_i_netvouz{background-position:0 -1190px!important}.a2a_i_newsalloy{background-position:0 -1207px!important}.a2a_i_newsisfree{background-position:0 -1224px!important}.a2a_i_newstrust{background-position:0 -1241px!important}.a2a_i_newsvine{background-position:0 -1258px!important}.a2a_i_nujij{background-position:0 -1275px!important}.a2a_i_odnoklassniki{background-position:0 -1292px!important}.a2a_i_oknotizie{background-position:0 -1309px!important}.a2a_i_oldreader{background-position:0 -1326px!important}.a2a_i_outlook_com{background-position:0 -1343px!important}.a2a_i_pinboard{background-position:0 -1360px!important}.a2a_i_pinterest{background-position:0 -1377px!important}.a2a_i_plurk{background-position:0 -1394px!important}.a2a_i_pocket{background-position:0 -1411px!important}.a2a_i_podnova{background-position:0 -1428px!important}.a2a_i_print{background-position:0 -1445px!important}.a2a_i_printfriendly{background-position:0 -1462px!important}.a2a_i_protopage{background-position:0 -1479px!important}.a2a_i_pusha{background-position:0 -1496px!important}.a2a_i_qzone{background-position:0 -1513px!important}.a2a_i_reddit{background-position:0 -1530px!important}.a2a_i_rediff{background-position:0 -1547px!important}.a2a_i_renren{background-position:0 -1564px!important}.a2a_i_segnalo{background-position:0 -1581px!important}.a2a_i_share{background-position:0 -1598px!important}.a2a_i_sina_weibo{background-position:0 -1615px!important}.a2a_i_sitejot{background-position:0 -1632px!important}.a2a_i_slashdot{background-position:0 -1649px!important}.a2a_i_stumbleupon{background-position:0 -1666px!important}.a2a_i_stumpedia{background-position:0 -1683px!important}.a2a_i_svejo{background-position:0 -1700px!important}.a2a_i_symbaloo{background-position:0 -1717px!important}.a2a_i_thefreedictionary{background-position:0 -1734px!important}.a2a_i_thefreelibrary{background-position:0 -1751px!important}.a2a_i_tuenti{background-position:0 -1768px!important}.a2a_i_tumblr{background-position:0 -1785px!important}.a2a_i_twiddla{background-position:0 -1802px!important}.a2a_i_twitter{background-position:0 -1819px!important}.a2a_i_typepad{background-position:0 -1836px!important}.a2a_i_viadeo{background-position:0 -1853px!important}.a2a_i_vimeo{background-position:0 -1870px!important}.a2a_i_vk{background-position:0 -1887px!important}.a2a_i_wanelo{background-position:0 -1904px!important}.a2a_i_webnews{background-position:0 -1921px!important}.a2a_i_whatsapp{background-position:0 -1938px!important}.a2a_i_winksite{background-position:0 -1955px!important}.a2a_i_wordpress{background-position:0 -1972px!important}.a2a_i_wykop{background-position:0 -1989px!important}.a2a_i_xing{background-position:0 -2006px!important}.a2a_i_y18{background-position:0 -2023px!important}.a2a_i_yahoo{background-position:0 -2040px!important}.a2a_i_yim{background-position:0 -2057px!important}.a2a_i_yoolink{background-position:0 -2074px!important}.a2a_i_youmob{background-position:0 -2091px!important}.a2a_i_youtube{background-position:0 -2108px!important}.a2a_i_yummly{background-position:0 -2125px!important}</style><link href="Menampilkan%20data%20dengan%20datatables%20-%20HarviaCode.com_files/icons.css" rel="stylesheet"><script src="Menampilkan%20data%20dengan%20datatables%20-%20HarviaCode.com_files/e.htm" type="text/javascript" defer="defer"></script></head>
+
+<body class="single single-post postid-419 single-format-standard col-3cm full-width topbar-enabled chrome s1-collapse s2-collapse">
+
+<div id="wrapper">
+
+	<header id="header">
+	
+					<nav class="nav-container group" id="nav-topbar">
+				<div class="nav-toggle"><i class="fa fa-bars"></i></div>
+				<div class="nav-text"><!-- put your mobile menu text here --></div>
+				<div class="nav-wrap container"><ul id="menu-menu" class="nav container-inner group"><li id="menu-item-68" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-68"><a href="http://harviacode.com/">Home</a></li>
+<li id="menu-item-69" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-69"><a href="http://harviacode.com/tentang-kami/">Tentang Kami</a></li>
+<li id="menu-item-162" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-162"><a href="http://harviacode.com/kursus/">Kursus</a></li>
+<li id="menu-item-268" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-268"><a href="http://harviacode.com/contributor/">Contributor</a></li>
+<li id="menu-item-109" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-109"><a href="http://harviacode.com/hubungi-kami/">Hubungi Kami</a></li>
+</ul></div>
+				
+				<div class="container">
+					<div class="container-inner">		
+						<div class="toggle-search"><i class="fa fa-search"></i></div>
+						<div class="search-expand">
+							<div class="search-expand-inner">
+								<form method="get" class="searchform themeform" action="http://harviacode.com/">
+	<div>
+		<input class="search" name="s" onblur="if(this.value=='')this.value='To search type and hit enter';" onfocus="if(this.value=='To search type and hit enter')this.value='';" value="To search type and hit enter" type="text">
+	</div>
+</form>							</div>
+						</div>
+					</div><!--/.container-inner-->
+				</div><!--/.container-->
+				
+			</nav><!--/#nav-topbar-->
+				
+		<div class="container group">
+			<div class="container-inner">
+				
+				<div class="group pad">
+					<p class="site-title"><a href="http://harviacode.com/" rel="home">HarviaCode.com</a></p>
+					<p class="site-description">Tutorial PHP, HTML, CSS, Javascript, Word, Excel</p>									</div>
+				
+								
+			</div><!--/.container-inner-->
+		</div><!--/.container-->
+		
+	</header><!--/#header-->
+	
+	<div class="container" id="page">
+		<div class="container-inner">			
+			<div class="main">
+				<div class="main-inner group">
+<section class="content">
+	
+	<div class="page-title pad group">
+
+			<ul class="meta-single group">
+			<li class="category"><a href="http://harviacode.com/category/serba-serbi/" rel="category tag">serba-serbi</a></li>
+						<li class="comments"><a href="http://harviacode.com/2015/01/15/menampilkan-data-dengan-datatables/#comments"><i class="fa fa-comments-o"></i>0</a></li>
+					</ul>
+		
+	
+</div><!--/.page-title-->	
+	<div class="pad group">
+		
+					<article class="post-419 post type-post status-publish format-standard has-post-thumbnail hentry category-serba-serbi tag-datatables">	
+				<div class="post-inner group">
+					
+					<h1 class="post-title">Menampilkan data dengan datatables</h1>
+					<p class="post-byline">by <a href="http://harviacode.com/author/okta/" title="Posts by Okta Diantama" rel="author">Okta Diantama</a> · January 15, 2015</p>
+					
+										
+					<div class="clear"></div>
+					
+					<div class="entry">	
+						<div class="entry-inner">
+							<p>Pada artikel kali ini saya akan berbagi informasi mengenai 
+cara menampilkan data. Jika pada artikel sebelumnya kita telah belajar 
+bagaimana membuat paginasi <a title="disini" href="http://harviacode.com/2014/10/07/membuat-paginasi-atau-halaman-php-mysql/" target="_blank">disini </a>dan <a title="disini" href="http://harviacode.com/2014/12/25/membuat-paginasi-atau-halaman-dengan-form-pencarian/" target="_blank">disini</a>,
+ pada kesempatan kali ini kita akan belajar menampilkan data dengan 
+menggunakan datatable. Dengan menggunakan datatables, kita tidak perlu 
+membuat paginasi dan pencarian secara manual.</p>
+<p>Berikut ini adalah contoh cara menampilkan data dengan datatables :</p>
+<p>Step 1 : Anda perlu mendownload datatables, bootstrap, dan jquery. 
+Anda bisa mendownload file-file tersebut di akhir artikel ini.</p>
+<p>Step 2 : Saya asumsikan anda telah memiliki database dan sebuah tabel
+ provinsi di dalamnya (anda juga bisa mendownloadnya di akhir artikel 
+ini). Sekarang tinggal buat file index.php untuk menampilkan data dengan
+ datatables. Berikut ini adalah kode untuk index.php.</p><!-- Crayon Syntax Highlighter v2.7.1 -->
+
+		<div id="crayon-55792e9f656c2536714319" class="crayon-syntax crayon-theme-github crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px ! important; line-height: 15px ! important; height: auto;">
+		
+			<div class="crayon-toolbar" data-settings=" show" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-title">index.php</span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-mixed-highlight" title="Contains Mixed Languages"></span><div class="crayon-button crayon-nums-button crayon-pressed" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div><span class="crayon-language">XHTML</span></div></div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly="readonly" style="-moz-tab-size: 4; font-size: 12px ! important; line-height: 15px ! important; z-index: 0; opacity: 0; overflow: hidden;">&lt;!doctype html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Harviacode - Datatables&lt;/title&gt;
+        &lt;link rel="stylesheet" href="css/bootstrap.min.css"/&gt;
+        &lt;link rel="stylesheet" href="css/dataTables.bootstrap.css"/&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div class="container"&gt;
+            &lt;table id="provinsi" class="table table-bordered"&gt;
+                &lt;thead&gt;
+                    &lt;tr&gt;
+                        &lt;th width="10%"&gt;Nomor&lt;/th&gt;
+                        &lt;th width="15%"&gt;Provinsi&lt;/th&gt;
+                        &lt;th width="15%"&gt;Aksi&lt;/th&gt;
+                    &lt;/tr&gt;
+                &lt;/thead&gt;
+                &lt;tbody&gt;
+                    &lt;?php
+
+                    //Data mentah yang ditampilkan ke tabel    
+                    mysql_connect('localhost', 'root', 'password-anda');
+                    mysql_select_db('harviacode');
+                    $sql = mysql_query('SELECT * FROM provinsi');
+                    $no = 1;
+                    while ($r = mysql_fetch_array($sql)) {
+                    $id = $r['id'];
+                    ?&gt;
+
+                    &lt;tr align='left'&gt;
+                        &lt;td&gt;&lt;?php echo  $no;?&gt;&lt;/td&gt;
+                        &lt;td&gt;&lt;?php echo  $r['provinsi']; ?&gt;&lt;/td&gt;
+                        &lt;td&gt;
+                            &lt;a href="edit.php?id=&lt;?php echo  $r['id_provinsi']; ?&gt;"&gt;Edit&lt;/a&gt; | 
+                            &lt;a href="delete.php?id=&lt;?php echo  $r['id_provinsi']; ?&gt;"&gt;Delete&lt;/a&gt;
+                        &lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;?php
+                    $no++;
+                    }
+                    ?&gt;
+                &lt;/tbody&gt;
+            &lt;/table&gt;  
+        &lt;/div&gt;
+        
+        &lt;script src="js/jquery-1.11.0.js"&gt;&lt;/script&gt;
+        &lt;script src="js/bootstrap.min.js"&gt;&lt;/script&gt;
+        &lt;script src="datatables/jquery.dataTables.js"&gt;&lt;/script&gt;
+        &lt;script src="datatables/dataTables.bootstrap.js"&gt;&lt;/script&gt;
+        &lt;script type="text/javascript"&gt;
+            $(function() {
+                $("#provinsi").dataTable();
+            });
+        &lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</textarea></div>
+			<div class="crayon-main" style="position: relative; z-index: 1; overflow: hidden;">
+				<table style="" class="crayon-table">
+					<tbody><tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-55792e9f656c2536714319-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-55792e9f656c2536714319-2">2</div><div class="crayon-num" data-line="crayon-55792e9f656c2536714319-3">3</div><div class="crayon-num crayon-striped-num" data-line="crayon-55792e9f656c2536714319-4">4</div><div class="crayon-num" data-line="crayon-55792e9f656c2536714319-5">5</div><div class="crayon-num crayon-striped-num" data-line="crayon-55792e9f656c2536714319-6">6</div><div class="crayon-num" data-line="crayon-55792e9f656c2536714319-7">7</div><div class="crayon-num crayon-striped-num" data-line="crayon-55792e9f656c2536714319-8">8</div><div class="crayon-num" data-line="crayon-55792e9f656c2536714319-9">9</div><div class="crayon-num crayon-striped-num" data-line="crayon-55792e9f656c2536714319-10">10</div><div class="crayon-num" data-line="crayon-55792e9f656c2536714319-11">11</div><div class="crayon-num crayon-striped-num" data-line="crayon-55792e9f656c2536714319-12">12</div><div class="crayon-num" data-line="crayon-55792e9f656c2536714319-13">13</div><div class="crayon-num crayon-striped-num" data-line="crayon-55792e9f656c2536714319-14">14</div><div class="crayon-num" data-line="crayon-55792e9f656c2536714319-15">15</div><div class="crayon-num crayon-striped-num" data-line="crayon-55792e9f656c2536714319-16">16</div><div class="crayon-num" data-line="crayon-55792e9f656c2536714319-17">17</div><div class="crayon-num crayon-striped-num" data-line="crayon-55792e9f656c2536714319-18">18</div><div class="crayon-num" data-line="crayon-55792e9f656c2536714319-19">19</div><div class="crayon-num crayon-striped-num" data-line="crayon-55792e9f656c2536714319-20">20</div><div class="crayon-num" data-line="crayon-55792e9f656c2536714319-21">21</div><div class="crayon-num crayon-striped-num" data-line="crayon-55792e9f656c2536714319-22">22</div><div class="crayon-num" data-line="crayon-55792e9f656c2536714319-23">23</div><div class="crayon-num crayon-striped-num" data-line="crayon-55792e9f656c2536714319-24">24</div><div class="crayon-num" data-line="crayon-55792e9f656c2536714319-25">25</div><div class="crayon-num crayon-striped-num" data-line="crayon-55792e9f656c2536714319-26">26</div><div class="crayon-num" data-line="crayon-55792e9f656c2536714319-27">27</div><div class="crayon-num crayon-striped-num" data-line="crayon-55792e9f656c2536714319-28">28</div><div class="crayon-num" data-line="crayon-55792e9f656c2536714319-29">29</div><div class="crayon-num crayon-striped-num" data-line="crayon-55792e9f656c2536714319-30">30</div><div class="crayon-num" data-line="crayon-55792e9f656c2536714319-31">31</div><div class="crayon-num crayon-striped-num" data-line="crayon-55792e9f656c2536714319-32">32</div><div class="crayon-num" data-line="crayon-55792e9f656c2536714319-33">33</div><div class="crayon-num crayon-striped-num" data-line="crayon-55792e9f656c2536714319-34">34</div><div class="crayon-num" data-line="crayon-55792e9f656c2536714319-35">35</div><div class="crayon-num crayon-striped-num" data-line="crayon-55792e9f656c2536714319-36">36</div><div class="crayon-num" data-line="crayon-55792e9f656c2536714319-37">37</div><div class="crayon-num crayon-striped-num" data-line="crayon-55792e9f656c2536714319-38">38</div><div class="crayon-num" data-line="crayon-55792e9f656c2536714319-39">39</div><div class="crayon-num crayon-striped-num" data-line="crayon-55792e9f656c2536714319-40">40</div><div class="crayon-num" data-line="crayon-55792e9f656c2536714319-41">41</div><div class="crayon-num crayon-striped-num" data-line="crayon-55792e9f656c2536714319-42">42</div><div class="crayon-num" data-line="crayon-55792e9f656c2536714319-43">43</div><div class="crayon-num crayon-striped-num" data-line="crayon-55792e9f656c2536714319-44">44</div><div class="crayon-num" data-line="crayon-55792e9f656c2536714319-45">45</div><div class="crayon-num crayon-striped-num" data-line="crayon-55792e9f656c2536714319-46">46</div><div class="crayon-num" data-line="crayon-55792e9f656c2536714319-47">47</div><div class="crayon-num crayon-striped-num" data-line="crayon-55792e9f656c2536714319-48">48</div><div class="crayon-num" data-line="crayon-55792e9f656c2536714319-49">49</div><div class="crayon-num crayon-striped-num" data-line="crayon-55792e9f656c2536714319-50">50</div><div class="crayon-num" data-line="crayon-55792e9f656c2536714319-51">51</div><div class="crayon-num crayon-striped-num" data-line="crayon-55792e9f656c2536714319-52">52</div><div class="crayon-num" data-line="crayon-55792e9f656c2536714319-53">53</div><div class="crayon-num crayon-striped-num" data-line="crayon-55792e9f656c2536714319-54">54</div><div class="crayon-num" data-line="crayon-55792e9f656c2536714319-55">55</div><div class="crayon-num crayon-striped-num" data-line="crayon-55792e9f656c2536714319-56">56</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-55792e9f656c2536714319-1"><span class="crayon-n">&lt;!doctype html&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-55792e9f656c2536714319-2"><span class="crayon-r ">&lt;html&gt;</span></div><div class="crayon-line" id="crayon-55792e9f656c2536714319-3"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;head&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-55792e9f656c2536714319-4"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;title&gt;</span><span class="crayon-i ">Harviacode - Datatables</span><span class="crayon-r ">&lt;/title&gt;</span></div><div class="crayon-line" id="crayon-55792e9f656c2536714319-5"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;link </span><span class="crayon-e ">rel</span><span class="crayon-o">=</span><span class="crayon-s ">"stylesheet"</span><span class="crayon-h"> </span><span class="crayon-e ">href</span><span class="crayon-o">=</span><span class="crayon-s ">"css/bootstrap.min.css"</span><span class="crayon-r ">/&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-55792e9f656c2536714319-6"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;link </span><span class="crayon-e ">rel</span><span class="crayon-o">=</span><span class="crayon-s ">"stylesheet"</span><span class="crayon-h"> </span><span class="crayon-e ">href</span><span class="crayon-o">=</span><span class="crayon-s ">"css/dataTables.bootstrap.css"</span><span class="crayon-r ">/&gt;</span></div><div class="crayon-line" id="crayon-55792e9f656c2536714319-7"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/head&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-55792e9f656c2536714319-8"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;body&gt;</span></div><div class="crayon-line" id="crayon-55792e9f656c2536714319-9"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;div </span><span class="crayon-e ">class</span><span class="crayon-o">=</span><span class="crayon-s ">"container"</span><span class="crayon-r ">&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-55792e9f656c2536714319-10"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;table </span><span class="crayon-e ">id</span><span class="crayon-o">=</span><span class="crayon-s ">"provinsi"</span><span class="crayon-h"> </span><span class="crayon-e ">class</span><span class="crayon-o">=</span><span class="crayon-s ">"table table-bordered"</span><span class="crayon-r ">&gt;</span></div><div class="crayon-line" id="crayon-55792e9f656c2536714319-11"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;thead&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-55792e9f656c2536714319-12"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;tr&gt;</span></div><div class="crayon-line" id="crayon-55792e9f656c2536714319-13"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;th </span><span class="crayon-e ">width</span><span class="crayon-o">=</span><span class="crayon-s ">"10%"</span><span class="crayon-r ">&gt;</span><span class="crayon-i ">Nomor</span><span class="crayon-r ">&lt;/th&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-55792e9f656c2536714319-14"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;th </span><span class="crayon-e ">width</span><span class="crayon-o">=</span><span class="crayon-s ">"15%"</span><span class="crayon-r ">&gt;</span><span class="crayon-i ">Provinsi</span><span class="crayon-r ">&lt;/th&gt;</span></div><div class="crayon-line" id="crayon-55792e9f656c2536714319-15"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;th </span><span class="crayon-e ">width</span><span class="crayon-o">=</span><span class="crayon-s ">"15%"</span><span class="crayon-r ">&gt;</span><span class="crayon-i ">Aksi</span><span class="crayon-r ">&lt;/th&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-55792e9f656c2536714319-16"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/tr&gt;</span></div><div class="crayon-line" id="crayon-55792e9f656c2536714319-17"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/thead&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-55792e9f656c2536714319-18"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;tbody&gt;</span></div><div class="crayon-line" id="crayon-55792e9f656c2536714319-19"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="crayon-ta">&lt;?php</span></span></div><div class="crayon-line crayon-striped-line" id="crayon-55792e9f656c2536714319-20">&nbsp;</div><div class="crayon-line" id="crayon-55792e9f656c2536714319-21"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-c">//Data mentah yang ditampilkan ke tabel&nbsp;&nbsp;&nbsp;&nbsp;</span></div><div class="crayon-line crayon-striped-line" id="crayon-55792e9f656c2536714319-22"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">mysql_connect</span><span class="crayon-sy">(</span><span class="crayon-s">'localhost'</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-s">'root'</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-s">'password-anda'</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-55792e9f656c2536714319-23"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">mysql_select_db</span><span class="crayon-sy">(</span><span class="crayon-s">'harviacode'</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-55792e9f656c2536714319-24"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">$sql</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-e">mysql_query</span><span class="crayon-sy">(</span><span class="crayon-s">'SELECT * FROM provinsi'</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-55792e9f656c2536714319-25"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">$no</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-cn">1</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-55792e9f656c2536714319-26"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-st">while</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-v">$r</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-e">mysql_fetch_array</span><span class="crayon-sy">(</span><span class="crayon-v">$sql</span><span class="crayon-sy">)</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-sy">{</span></div><div class="crayon-line" id="crayon-55792e9f656c2536714319-27"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">$id</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-v">$r</span><span class="crayon-sy">[</span><span class="crayon-s">'id'</span><span class="crayon-sy">]</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-55792e9f656c2536714319-28"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-ta">?&gt;</span></div><div class="crayon-line" id="crayon-55792e9f656c2536714319-29">&nbsp;</div><div class="crayon-line crayon-striped-line" id="crayon-55792e9f656c2536714319-30"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;tr </span><span class="crayon-e ">align</span><span class="crayon-o">=</span><span class="crayon-s ">'left'</span><span class="crayon-r ">&gt;</span></div><div class="crayon-line" id="crayon-55792e9f656c2536714319-31"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;td&gt;</span><span class="crayon-ta">&lt;?php</span><span class="crayon-h"> </span><span class="crayon-k ">echo</span><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-v">$no</span><span class="crayon-sy">;</span><span class="crayon-ta">?&gt;</span><span class="crayon-r ">&lt;/td&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-55792e9f656c2536714319-32"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;td&gt;</span><span class="crayon-ta">&lt;?php</span><span class="crayon-h"> </span><span class="crayon-k ">echo</span><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-v">$r</span><span class="crayon-sy">[</span><span class="crayon-s">'provinsi'</span><span class="crayon-sy">]</span><span class="crayon-sy">;</span><span class="crayon-h"> </span><span class="crayon-ta">?&gt;</span><span class="crayon-r ">&lt;/td&gt;</span></div><div class="crayon-line" id="crayon-55792e9f656c2536714319-33"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;td&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-55792e9f656c2536714319-34"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;a </span><span class="crayon-e ">href</span><span class="crayon-o">=</span><span class="crayon-s ">"edit.php?id=<span class="crayon-ta">&lt;?php</span><span class="crayon-h"> </span><span class="crayon-k ">echo</span><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-v">$r</span><span class="crayon-sy">[</span><span class="crayon-s">'id_provinsi'</span><span class="crayon-sy">]</span><span class="crayon-sy">;</span><span class="crayon-h"> </span><span class="crayon-ta">?&gt;</span>"</span><span class="crayon-r ">&gt;</span><span class="crayon-i ">Edit</span><span class="crayon-r ">&lt;/a&gt;</span><span class="crayon-i "> | </span></div><div class="crayon-line" id="crayon-55792e9f656c2536714319-35"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;a </span><span class="crayon-e ">href</span><span class="crayon-o">=</span><span class="crayon-s ">"delete.php?id=<span class="crayon-ta">&lt;?php</span><span class="crayon-h"> </span><span class="crayon-k ">echo</span><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-v">$r</span><span class="crayon-sy">[</span><span class="crayon-s">'id_provinsi'</span><span class="crayon-sy">]</span><span class="crayon-sy">;</span><span class="crayon-h"> </span><span class="crayon-ta">?&gt;</span>"</span><span class="crayon-r ">&gt;</span><span class="crayon-i ">Delete</span><span class="crayon-r ">&lt;/a&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-55792e9f656c2536714319-36"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/td&gt;</span></div><div class="crayon-line" id="crayon-55792e9f656c2536714319-37"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/tr&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-55792e9f656c2536714319-38"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="crayon-ta">&lt;?php</span></span></div><div class="crayon-line" id="crayon-55792e9f656c2536714319-39"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">$no</span><span class="crayon-o">++</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-55792e9f656c2536714319-40"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">}</span></div><div class="crayon-line" id="crayon-55792e9f656c2536714319-41"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-ta">?&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-55792e9f656c2536714319-42"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/tbody&gt;</span></div><div class="crayon-line" id="crayon-55792e9f656c2536714319-43"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/table&gt;</span><span class="crayon-i ">&nbsp;&nbsp;</span></div><div class="crayon-line crayon-striped-line" id="crayon-55792e9f656c2536714319-44"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/div&gt;</span></div><div class="crayon-line" id="crayon-55792e9f656c2536714319-45"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div><div class="crayon-line crayon-striped-line" id="crayon-55792e9f656c2536714319-46"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="crayon-ta">&lt;script </span><span class="crayon-e ">src</span><span class="crayon-o">=</span><span class="crayon-s">"js/jquery-1.11.0.js"</span><span class="crayon-o">&gt;</span><span class="crayon-ta">&lt;/script&gt;</span></span></div><div class="crayon-line" id="crayon-55792e9f656c2536714319-47"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="crayon-ta">&lt;script </span><span class="crayon-e ">src</span><span class="crayon-o">=</span><span class="crayon-s">"js/bootstrap.min.js"</span><span class="crayon-o">&gt;</span><span class="crayon-ta">&lt;/script&gt;</span></span></div><div class="crayon-line crayon-striped-line" id="crayon-55792e9f656c2536714319-48"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="crayon-ta">&lt;script </span><span class="crayon-e ">src</span><span class="crayon-o">=</span><span class="crayon-s">"datatables/jquery.dataTables.js"</span><span class="crayon-o">&gt;</span><span class="crayon-ta">&lt;/script&gt;</span></span></div><div class="crayon-line" id="crayon-55792e9f656c2536714319-49"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="crayon-ta">&lt;script </span><span class="crayon-e ">src</span><span class="crayon-o">=</span><span class="crayon-s">"datatables/dataTables.bootstrap.js"</span><span class="crayon-o">&gt;</span><span class="crayon-ta">&lt;/script&gt;</span></span></div><div class="crayon-line crayon-striped-line" id="crayon-55792e9f656c2536714319-50"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="crayon-ta">&lt;script </span><span class="crayon-e ">type</span><span class="crayon-o">=</span><span class="crayon-s">"text/javascript"</span><span class="crayon-o">&gt;</span></span></div><div class="crayon-line" id="crayon-55792e9f656c2536714319-51"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">$</span><span class="crayon-sy">(</span><span class="crayon-t">function</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-sy">{</span></div><div class="crayon-line crayon-striped-line" id="crayon-55792e9f656c2536714319-52"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">$</span><span class="crayon-sy">(</span><span class="crayon-s">"#provinsi"</span><span class="crayon-sy">)</span><span class="crayon-sy">.</span><span class="crayon-e">dataTable</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-55792e9f656c2536714319-53"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">}</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-55792e9f656c2536714319-54"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-ta">&lt;/script&gt;</span></div><div class="crayon-line" id="crayon-55792e9f656c2536714319-55"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/body&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-55792e9f656c2536714319-56"><span class="crayon-r ">&lt;/html&gt;</span></div></div></td>
+					</tr>
+				</tbody></table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0303 seconds] -->
+<p></p>
+<h1 style="text-align: center;"><a href="http://demo.harviacode.com/datatables/" target="_blank">Demo</a> | <a href="http://demo.harviacode.com/datatables/datatables.zip">Download</a></h1>
+<p>&nbsp;</p>
+<p>Untuk membuat tabel dengan datatable ini sama dengan membuat tabel 
+pada umumnya. Kita hanya perlu menambahkan id pada elemen table, 
+kemudian membuat datatables dengan fungsi javascript. Tentu kita juga 
+harus menginclude kan javascript dan css datatables.</p>
+<p>Dengan cara di atas sebenarnya kita melakukan pengambilan seluruh 
+data sekaligus, kemudian datatables yang membuat paginasinya. Jika data 
+anda banyak misalnya mencapai puluhan ribu, teknik di atas <span style="text-decoration: underline;">akan terasa berat</span>. Untuk mengatasi hal tersebut, kita bisa menggunakan datatables secara serverside.</p>
+<p><a href="http://harviacode.com/2015/01/19/menampilkan-datatables-secara-serverside/">Cara membuat datatables secara serverside akan kita bahas di sini</a>.</p>
+<p>Terima kasih telah berkunjung ke harviacode.com, semoga bermanfaat.</p>
+<div class="addtoany_share_save_container addtoany_content_bottom"><div class="addtoany_header">Bagikan artikel ini ya.. terima kasih</div><div style="line-height: 32px;" class="a2a_kit a2a_kit_size_32 addtoany_list a2a_target" id=""><a class="a2a_button_facebook a2a_counter" href="http://harviacode.com/" title="Facebook" rel="nofollow" target="_blank"><span class="a2a_svg a2a_s__default a2a_s_facebook"></span><span style="line-height: 32px; height: 32px; width: 64px; font-size: 16px;" class="a2a_count"><span>1</span></span></a><a class="a2a_button_twitter a2a_counter" href="http://harviacode.com/" title="Twitter" rel="nofollow" target="_blank"><span class="a2a_svg a2a_s__default a2a_s_twitter"></span><span style="line-height: 32px; height: 32px; width: 64px; font-size: 16px;" class="a2a_count"><span>0</span></span></a><a class="a2a_button_google_plus" href="http://harviacode.com/" title="Google+" rel="nofollow" target="_blank"><span class="a2a_svg a2a_s__default a2a_s_google_plus"></span></a><a class="a2a_button_whatsapp" href="http://harviacode.com/" title="WhatsApp" rel="nofollow" target="_blank"><span class="a2a_svg a2a_s__default a2a_s_whatsapp"></span></a><a class="a2a_dd addtoany_share_save" href="https://www.addtoany.com/share_save#url=http%3A%2F%2Fharviacode.com%2F2015%2F01%2F15%2Fmenampilkan-data-dengan-datatables%2F&amp;title=Menampilkan%20data%20dengan%20datatables&amp;description=datatables%2C%20datatable%2C%20menggunakan%20datatable%2C%20contoh%20datatables"><span class="a2a_svg a2a_s__default a2a_s_a2a"></span></a>
+<script type="text/javascript"><!--
+wpa2a.script_load();
+//--></script>
+</div></div>													</div>
+						<div class="clear"></div>				
+					</div><!--/.entry-->
+					
+				</div><!--/.post-inner-->	
+			</article><!--/.post-->				
+				
+		<div class="clear"></div>
+		
+		<p class="post-tags"><span>Tags:</span> <a href="http://harviacode.com/tag/datatables/" rel="tag">datatables</a></p>		
+				
+			<ul class="post-nav group">
+		<li class="next"><a href="http://harviacode.com/2015/01/15/membuat-agenda-dengan-php-dan-mysql/" rel="next"><i class="fa fa-chevron-right"></i><strong>Next story</strong> <span>Membuat agenda dengan php dan mysql</span></a></li>
+		<li class="previous"><a href="http://harviacode.com/2015/01/13/mengatur-preference-tampilan-halaman-web-dengan-session/" rel="prev"><i class="fa fa-chevron-left"></i><strong>Previous story</strong> <span>Mengatur preference tampilan halaman web dengan session</span></a></li>
+	</ul>
+		
+		
+
+<h4 class="heading">
+	<i class="fa fa-hand-o-right"></i>You may also like...</h4>
+
+<ul class="related-posts group">
+	
+		<li class="related post-hover">
+		<article class="post-583 post type-post status-publish format-standard has-post-thumbnail hentry category-serba-serbi tag-javascript tag-konami-code">
+
+			<div class="post-thumbnail">
+				<a href="http://harviacode.com/2015/03/16/konami-code/" title="Konami Code">
+											<img src="Menampilkan%20data%20dengan%20datatables%20-%20HarviaCode.com_files/konami-code.jpg" class="attachment-thumb-medium wp-post-image" alt="konami code" height="243" width="488">																								</a>
+									<a class="post-comments" href="http://harviacode.com/2015/03/16/konami-code/#comments"><span><i class="fa fa-comments-o"></i>2</span></a>
+							</div><!--/.post-thumbnail-->
+			
+			<div class="related-inner">
+				
+				<h4 class="post-title">
+					<a href="http://harviacode.com/2015/03/16/konami-code/" rel="bookmark" title="Konami Code">Konami Code</a>
+				</h4><!--/.post-title-->
+				
+				<div class="post-meta group">
+					<p class="post-date">16 Mar, 2015</p>
+				</div><!--/.post-meta-->
+			
+			</div><!--/.related-inner-->
+
+		</article>
+	</li><!--/.related-->
+		<li class="related post-hover">
+		<article class="post-479 post type-post status-publish format-standard has-post-thumbnail hentry category-javascript category-serba-serbi tag-scroll">
+
+			<div class="post-thumbnail">
+				<a href="http://harviacode.com/2015/01/30/mengubah-tampilan-scroll-bar/" title="Mengubah tampilan scroll bar">
+											<img src="Menampilkan%20data%20dengan%20datatables%20-%20HarviaCode.com_files/scroll-default.png" class="attachment-thumb-medium wp-post-image" alt="scroll default" height="220" width="520">																								</a>
+									<a class="post-comments" href="http://harviacode.com/2015/01/30/mengubah-tampilan-scroll-bar/#comments"><span><i class="fa fa-comments-o"></i>0</span></a>
+							</div><!--/.post-thumbnail-->
+			
+			<div class="related-inner">
+				
+				<h4 class="post-title">
+					<a href="http://harviacode.com/2015/01/30/mengubah-tampilan-scroll-bar/" rel="bookmark" title="Mengubah tampilan scroll bar">Mengubah tampilan scroll bar</a>
+				</h4><!--/.post-title-->
+				
+				<div class="post-meta group">
+					<p class="post-date">30 Jan, 2015</p>
+				</div><!--/.post-meta-->
+			
+			</div><!--/.related-inner-->
+
+		</article>
+	</li><!--/.related-->
+		<li class="related post-hover">
+		<article class="post-276 post type-post status-publish format-standard hentry category-serba-serbi tag-error">
+
+			<div class="post-thumbnail">
+				<a href="http://harviacode.com/2014/10/24/mengubah-tampilan-404-error/" title="Mengubah tampilan 404 error">
+											<img src="Menampilkan%20data%20dengan%20datatables%20-%20HarviaCode.com_files/thumb-medium.png" alt="Mengubah tampilan 404 error">
+																								</a>
+									<a class="post-comments" href="http://harviacode.com/2014/10/24/mengubah-tampilan-404-error/#comments"><span><i class="fa fa-comments-o"></i>0</span></a>
+							</div><!--/.post-thumbnail-->
+			
+			<div class="related-inner">
+				
+				<h4 class="post-title">
+					<a href="http://harviacode.com/2014/10/24/mengubah-tampilan-404-error/" rel="bookmark" title="Mengubah tampilan 404 error">Mengubah tampilan 404 error</a>
+				</h4><!--/.post-title-->
+				
+				<div class="post-meta group">
+					<p class="post-date">24 Oct, 2014</p>
+				</div><!--/.post-meta-->
+			
+			</div><!--/.related-inner-->
+
+		</article>
+	</li><!--/.related-->
+		
+</ul><!--/.post-related-->
+
+		
+		
+<section id="comments" class="themeform">
+	
+	
+					<!-- comments open, no comments -->
+			
+		
+							<div id="respond" class="comment-respond">
+				<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="http://harviacode.com/2015/01/15/menampilkan-data-dengan-datatables/#respond" style="display:none;">Cancel reply</a></small></h3>
+									<form action="http://harviacode.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+																			<p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p>							<p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" size="30" aria-required="true" required="required" type="text"></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" size="30" aria-describedby="email-notes" aria-required="true" required="required" type="text"></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" size="30" type="text"></p>
+												<p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" aria-describedby="form-allowed-tags" aria-required="true" required="required"></textarea></p>						<p class="form-allowed-tags" id="form-allowed-tags">You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:  <code>&lt;a
+ href="" title=""&gt; &lt;abbr title=""&gt; &lt;acronym title=""&gt; 
+&lt;b&gt; &lt;blockquote cite=""&gt; &lt;cite&gt; &lt;code class="" 
+title="" data-url=""&gt; &lt;del datetime=""&gt; &lt;em&gt; &lt;i&gt; 
+&lt;q cite=""&gt; &lt;s&gt; &lt;strike&gt; &lt;strong&gt; &lt;pre 
+class="" title="" data-url=""&gt; &lt;span class="" title="" 
+data-url=""&gt; </code></p>
+						<p class="form-submit"><input name="submit" id="submit" class="submit" value="Post Comment" type="submit"> <input name="comment_post_ID" value="419" id="comment_post_ID" type="hidden">
+<input name="comment_parent" id="comment_parent" value="0" type="hidden">
+</p><p style="display: none;"><input id="akismet_comment_nonce" name="akismet_comment_nonce" value="af9a0336c2" type="hidden"></p><p style="display: none;"></p>					<input id="ak_js" name="ak_js" value="1434005691522" type="hidden"></form>
+							</div><!-- #respond -->
+			
+</section><!--/#comments-->		
+	</div><!--/.pad-->
+	
+</section><!--/.content-->
+
+
+	<div class="sidebar s1">
+		
+		<a class="sidebar-toggle" title="Expand Sidebar"><i class="fa icon-sidebar-toggle"></i></a>
+		
+		<div class="sidebar-content">
+			
+						<div class="sidebar-top group">
+				<p>Follow:</p>
+							</div>
+						
+						
+						
+			<div id="text-3" class="widget widget_text"><h3>Sukai dan Bagikan harviacode.com</h3>			<div class="textwidget"><div class=" fb_reset" id="fb-root"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe src="Menampilkan%20data%20dengan%20datatables%20-%20HarviaCode.com_files/1ldYU13brY_.htm" style="border: medium none;" tabindex="-1" title="Facebook Cross Domain Communication Frame" aria-hidden="true" id="fb_xdm_frame_http" scrolling="no" allowfullscreen="true" allowtransparency="true" name="fb_xdm_frame_http" frameborder="0"></iframe><iframe src="Menampilkan%20data%20dengan%20datatables%20-%20HarviaCode.com_files/1ldYU13brY__002.htm" style="border: medium none;" tabindex="-1" title="Facebook Cross Domain Communication Frame" aria-hidden="true" id="fb_xdm_frame_https" scrolling="no" allowfullscreen="true" allowtransparency="true" name="fb_xdm_frame_https" frameborder="0"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v2.3&appId=798631146844230";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div fb-iframe-plugin-query="app_id=798631146844230&amp;container_width=280&amp;height=300&amp;hide_cover=false&amp;href=https%3A%2F%2Fwww.facebook.com%2Fpages%2Fharviacodecom%2F1511333702422662&amp;locale=id_ID&amp;sdk=joey&amp;show_facepile=true&amp;show_posts=false&amp;width=300" fb-xfbml-state="rendered" class="fb-page fb_iframe_widget" data-href="https://www.facebook.com/pages/harviacodecom/1511333702422662" data-width="300" data-height="300" data-hide-cover="false" data-show-facepile="true" data-show-posts="false"><span style="vertical-align: bottom; width: 280px; height: 240px;"><iframe class="" src="Menampilkan%20data%20dengan%20datatables%20-%20HarviaCode.com_files/page.htm" style="border: medium none; visibility: visible; width: 280px; height: 240px;" title="fb:page Facebook Social Plugin" scrolling="no" allowfullscreen="true" allowtransparency="true" name="f277a2748caa174" frameborder="0" height="300px" width="300px"></iframe></span></div></div>
+		</div><div id="alxposts-2" class="widget widget_alx_posts">
+
+			
+	<ul class="alx-posts group thumbs-enabled">
+				<li>
+			
+						<div class="post-item-thumbnail">
+				<a href="http://harviacode.com/2014/11/03/membatasi-jumlah-kata-yang-tampil/" title="Membatasi jumlah kata yang tampil">
+											<img src="Menampilkan%20data%20dengan%20datatables%20-%20HarviaCode.com_files/thumb-medium.png" alt="Membatasi jumlah kata yang tampil">
+																								</a>
+			</div>
+						
+			<div class="post-item-inner group">
+				<p class="post-item-category"><a href="http://harviacode.com/category/php/" rel="category tag">php</a></p>				<p class="post-item-title"><a href="http://harviacode.com/2014/11/03/membatasi-jumlah-kata-yang-tampil/" rel="bookmark" title="Membatasi jumlah kata yang tampil">Membatasi jumlah kata yang tampil</a></p>
+				<p class="post-item-date">3 Nov, 2014</p>			</div>
+			
+		</li>
+				<li>
+			
+						<div class="post-item-thumbnail">
+				<a href="http://harviacode.com/2014/10/26/membuat-chat-ala-facebook-dengan-freichat-part-12/" title="Membuat chat ala facebook dengan Freichat (Part 1/2)">
+											<img src="Menampilkan%20data%20dengan%20datatables%20-%20HarviaCode.com_files/frichat1.png" class="attachment-thumb-medium wp-post-image" alt="freichat 1" height="245" width="314">																								</a>
+			</div>
+						
+			<div class="post-item-inner group">
+				<p class="post-item-category"><a href="http://harviacode.com/category/php/" rel="category tag">php</a></p>				<p class="post-item-title"><a href="http://harviacode.com/2014/10/26/membuat-chat-ala-facebook-dengan-freichat-part-12/" rel="bookmark" title="Membuat chat ala facebook dengan Freichat (Part 1/2)">Membuat chat ala facebook dengan Freichat (Part 1/2)</a></p>
+				<p class="post-item-date">26 Oct, 2014</p>			</div>
+			
+		</li>
+				<li>
+			
+						<div class="post-item-thumbnail">
+				<a href="http://harviacode.com/2015/05/04/integrasi-codeigniter-3-dengan-adminlte-2/" title="Integrasi Codeigniter 3 dengan AdminLTE 2">
+											<img src="Menampilkan%20data%20dengan%20datatables%20-%20HarviaCode.com_files/adminlte2.png" class="attachment-thumb-medium wp-post-image" alt="adminlte2" height="216" width="448">																								</a>
+			</div>
+						
+			<div class="post-item-inner group">
+				<p class="post-item-category"><a href="http://harviacode.com/category/codeigniter/" rel="category tag">codeigniter</a> / <a href="http://harviacode.com/category/html/" rel="category tag">html</a> / <a href="http://harviacode.com/category/php/" rel="category tag">php</a></p>				<p class="post-item-title"><a href="http://harviacode.com/2015/05/04/integrasi-codeigniter-3-dengan-adminlte-2/" rel="bookmark" title="Integrasi Codeigniter 3 dengan AdminLTE 2">Integrasi Codeigniter 3 dengan AdminLTE 2</a></p>
+				<p class="post-item-date">4 May, 2015</p>			</div>
+			
+		</li>
+				<li>
+			
+						<div class="post-item-thumbnail">
+				<a href="http://harviacode.com/2015/05/05/looping-ke-samping-untuk-galery/" title="Looping ke samping untuk galery">
+											<img src="Menampilkan%20data%20dengan%20datatables%20-%20HarviaCode.com_files/galery.jpg" class="attachment-thumb-medium wp-post-image" alt="galery" height="245" width="367">																								</a>
+			</div>
+						
+			<div class="post-item-inner group">
+				<p class="post-item-category"><a href="http://harviacode.com/category/php/" rel="category tag">php</a></p>				<p class="post-item-title"><a href="http://harviacode.com/2015/05/05/looping-ke-samping-untuk-galery/" rel="bookmark" title="Looping ke samping untuk galery">Looping ke samping untuk galery</a></p>
+				<p class="post-item-date">5 May, 2015</p>			</div>
+			
+		</li>
+				<li>
+			
+						<div class="post-item-thumbnail">
+				<a href="http://harviacode.com/2015/01/10/mengetahui-nama-hari-suatu-tanggal/" title="Mengetahui nama hari suatu tanggal">
+											<img src="Menampilkan%20data%20dengan%20datatables%20-%20HarviaCode.com_files/nama-hari.png" class="attachment-thumb-medium wp-post-image" alt="nama hari" height="108" width="520">																								</a>
+			</div>
+						
+			<div class="post-item-inner group">
+				<p class="post-item-category"><a href="http://harviacode.com/category/php/" rel="category tag">php</a></p>				<p class="post-item-title"><a href="http://harviacode.com/2015/01/10/mengetahui-nama-hari-suatu-tanggal/" rel="bookmark" title="Mengetahui nama hari suatu tanggal">Mengetahui nama hari suatu tanggal</a></p>
+				<p class="post-item-date">10 Jan, 2015</p>			</div>
+			
+		</li>
+				<li>
+			
+						<div class="post-item-thumbnail">
+				<a href="http://harviacode.com/2014/12/30/mencegah-chace-browser/" title="Mencegah chace browser">
+											<img src="Menampilkan%20data%20dengan%20datatables%20-%20HarviaCode.com_files/thumb-medium.png" alt="Mencegah chace browser">
+																								</a>
+			</div>
+						
+			<div class="post-item-inner group">
+				<p class="post-item-category"><a href="http://harviacode.com/category/php/" rel="category tag">php</a></p>				<p class="post-item-title"><a href="http://harviacode.com/2014/12/30/mencegah-chace-browser/" rel="bookmark" title="Mencegah chace browser">Mencegah chace browser</a></p>
+				<p class="post-item-date">30 Dec, 2014</p>			</div>
+			
+		</li>
+				<li>
+			
+						<div class="post-item-thumbnail">
+				<a href="http://harviacode.com/2015/02/19/membuat-login-dengan-codeigniter/" title="Membuat login dengan Codeigniter">
+											<img src="Menampilkan%20data%20dengan%20datatables%20-%20HarviaCode.com_files/login-codeigniter.jpg" class="attachment-thumb-medium wp-post-image" alt="login codeigniter" height="245" width="444">																								</a>
+			</div>
+						
+			<div class="post-item-inner group">
+				<p class="post-item-category"><a href="http://harviacode.com/category/codeigniter/" rel="category tag">codeigniter</a></p>				<p class="post-item-title"><a href="http://harviacode.com/2015/02/19/membuat-login-dengan-codeigniter/" rel="bookmark" title="Membuat login dengan Codeigniter">Membuat login dengan Codeigniter</a></p>
+				<p class="post-item-date">19 Feb, 2015</p>			</div>
+			
+		</li>
+				<li>
+			
+						<div class="post-item-thumbnail">
+				<a href="http://harviacode.com/2014/10/21/menghilangkan-index-pada-url-codeigniter/" title="Menghilangkan index pada url codeigniter">
+											<img src="Menampilkan%20data%20dengan%20datatables%20-%20HarviaCode.com_files/thumb-medium.png" alt="Menghilangkan index pada url codeigniter">
+																								</a>
+			</div>
+						
+			<div class="post-item-inner group">
+				<p class="post-item-category"><a href="http://harviacode.com/category/codeigniter/" rel="category tag">codeigniter</a></p>				<p class="post-item-title"><a href="http://harviacode.com/2014/10/21/menghilangkan-index-pada-url-codeigniter/" rel="bookmark" title="Menghilangkan index pada url codeigniter">Menghilangkan index pada url codeigniter</a></p>
+				<p class="post-item-date">21 Oct, 2014</p>			</div>
+			
+		</li>
+				<li>
+			
+						<div class="post-item-thumbnail">
+				<a href="http://harviacode.com/2014/07/25/css-fundamental/" title="CSS Fundamental">
+											<img src="Menampilkan%20data%20dengan%20datatables%20-%20HarviaCode.com_files/thumb-medium.png" alt="CSS Fundamental">
+																								</a>
+			</div>
+						
+			<div class="post-item-inner group">
+				<p class="post-item-category"><a href="http://harviacode.com/category/css/" rel="category tag">css</a></p>				<p class="post-item-title"><a href="http://harviacode.com/2014/07/25/css-fundamental/" rel="bookmark" title="CSS Fundamental">CSS Fundamental</a></p>
+				<p class="post-item-date">25 Jul, 2014</p>			</div>
+			
+		</li>
+				<li>
+			
+						<div class="post-item-thumbnail">
+				<a href="http://harviacode.com/2015/06/09/cara-looping-tanggal-dengan-php/" title="Cara looping tanggal dengan PHP">
+											<img src="Menampilkan%20data%20dengan%20datatables%20-%20HarviaCode.com_files/looping-date-php-520x245.png" class="attachment-thumb-medium wp-post-image" alt="looping date php" height="245" width="520">																								</a>
+			</div>
+						
+			<div class="post-item-inner group">
+				<p class="post-item-category"><a href="http://harviacode.com/category/php/" rel="category tag">php</a></p>				<p class="post-item-title"><a href="http://harviacode.com/2015/06/09/cara-looping-tanggal-dengan-php/" rel="bookmark" title="Cara looping tanggal dengan PHP">Cara looping tanggal dengan PHP</a></p>
+				<p class="post-item-date">9 Jun, 2015</p>			</div>
+			
+		</li>
+					</ul><!--/.alx-posts-->
+
+</div>
+			
+		</div><!--/.sidebar-content-->
+		
+	</div><!--/.sidebar-->
+
+	
+<div class="sidebar s2">
+	
+	<a class="sidebar-toggle" title="Expand Sidebar"><i class="fa icon-sidebar-toggle"></i></a>
+	
+	<div class="sidebar-content">
+		
+				<div class="sidebar-top group">
+			<p>More</p>
+		</div>
+				
+				
+		<div id="search-2" class="widget widget_search"><h3>Search</h3><form method="get" class="searchform themeform" action="http://harviacode.com/">
+	<div>
+		<input class="search" name="s" onblur="if(this.value=='')this.value='To search type and hit enter';" onfocus="if(this.value=='To search type and hit enter')this.value='';" value="To search type and hit enter" type="text">
+	</div>
+</form></div>		<div id="recent-posts-2" class="widget widget_recent_entries">		<h3>Recent Posts</h3>		<ul>
+					<li>
+				<a href="http://harviacode.com/2015/06/09/membuat-audio-player-dengan-html-5/">Membuat Audio Player dengan HTML 5</a>
+						</li>
+					<li>
+				<a href="http://harviacode.com/2015/06/09/cara-looping-tanggal-dengan-php/">Cara looping tanggal dengan PHP</a>
+						</li>
+					<li>
+				<a href="http://harviacode.com/2015/06/03/membuat-upload-gambar-tidak-required-pada-codeigniter-3/">Membuat upload gambar tidak required pada Codeigniter 3</a>
+						</li>
+					<li>
+				<a href="http://harviacode.com/2015/06/03/membuat-watermark-dengan-codeigniter-3/">Membuat watermark dengan Codeigniter 3</a>
+						</li>
+					<li>
+				<a href="http://harviacode.com/2015/06/03/membuat-thumbnail-dengan-codeigniter-3/">Membuat thumbnail dengan Codeigniter 3</a>
+						</li>
+				</ul>
+		</div><div id="recent-comments-5" class="widget widget_recent_comments"><h3>Recent Comments</h3><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link">Okta Anang Diantama</span> on <a href="http://harviacode.com/2015/06/09/membuat-audio-player-dengan-html-5/#comment-394">Membuat Audio Player dengan HTML 5</a></li><li class="recentcomments"><span class="comment-author-link">admin</span> on <a href="http://harviacode.com/2015/06/09/membuat-audio-player-dengan-html-5/#comment-393">Membuat Audio Player dengan HTML 5</a></li><li class="recentcomments"><span class="comment-author-link">Okta Anang Diantama</span> on <a href="http://harviacode.com/2015/06/09/membuat-audio-player-dengan-html-5/#comment-392">Membuat Audio Player dengan HTML 5</a></li><li class="recentcomments"><span class="comment-author-link">admin</span> on <a href="http://harviacode.com/2015/06/09/membuat-audio-player-dengan-html-5/#comment-391">Membuat Audio Player dengan HTML 5</a></li><li class="recentcomments"><span class="comment-author-link">Jimmy</span> on <a href="http://harviacode.com/2015/06/09/membuat-audio-player-dengan-html-5/#comment-390">Membuat Audio Player dengan HTML 5</a></li></ul></div><div id="categories-4" class="widget widget_categories"><h3>Categories</h3>		<ul>
+	<li class="cat-item cat-item-27"><a href="http://harviacode.com/category/codeigniter/">codeigniter</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="http://harviacode.com/category/css/">css</a>
+</li>
+	<li class="cat-item cat-item-8"><a href="http://harviacode.com/category/excel/">excel</a>
+</li>
+	<li class="cat-item cat-item-2"><a href="http://harviacode.com/category/html/">html</a>
+</li>
+	<li class="cat-item cat-item-6"><a href="http://harviacode.com/category/javascript/">javascript</a>
+</li>
+	<li class="cat-item cat-item-5"><a href="http://harviacode.com/category/ms-word/">ms word</a>
+</li>
+	<li class="cat-item cat-item-7"><a href="http://harviacode.com/category/mysql/">mysql</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="http://harviacode.com/category/php/">php</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="http://harviacode.com/category/serba-serbi/">serba-serbi</a>
+</li>
+		</ul>
+</div><div id="archives-4" class="widget widget_archive"><h3>Archives</h3>		<ul>
+	<li><a href="http://harviacode.com/2015/06/">June 2015</a></li>
+	<li><a href="http://harviacode.com/2015/05/">May 2015</a></li>
+	<li><a href="http://harviacode.com/2015/04/">April 2015</a></li>
+	<li><a href="http://harviacode.com/2015/03/">March 2015</a></li>
+	<li><a href="http://harviacode.com/2015/02/">February 2015</a></li>
+	<li><a href="http://harviacode.com/2015/01/">January 2015</a></li>
+	<li><a href="http://harviacode.com/2014/12/">December 2014</a></li>
+	<li><a href="http://harviacode.com/2014/11/">November 2014</a></li>
+	<li><a href="http://harviacode.com/2014/10/">October 2014</a></li>
+	<li><a href="http://harviacode.com/2014/09/">September 2014</a></li>
+	<li><a href="http://harviacode.com/2014/08/">August 2014</a></li>
+	<li><a href="http://harviacode.com/2014/07/">July 2014</a></li>
+		</ul>
+</div><div id="tag_cloud-4" class="widget widget_tag_cloud"><h3>Tags</h3><div class="tagcloud"><a href="http://harviacode.com/tag/ajax/" class="tag-link-10" title="6 topics" style="font-size: 13pt;">ajax</a>
+<a href="http://harviacode.com/tag/auto-text/" class="tag-link-9" title="1 topic" style="font-size: 8pt;">auto text</a>
+<a href="http://harviacode.com/tag/barcode/" class="tag-link-29" title="1 topic" style="font-size: 8pt;">barcode</a>
+<a href="http://harviacode.com/tag/body/" class="tag-link-13" title="1 topic" style="font-size: 8pt;">body</a>
+<a href="http://harviacode.com/tag/bootstrap/" class="tag-link-36" title="2 topics" style="font-size: 9.63636363636pt;">bootstrap</a>
+<a href="http://harviacode.com/tag/codeigniter-2/" class="tag-link-28" title="25 topics" style="font-size: 18.0909090909pt;">codeigniter</a>
+<a href="http://harviacode.com/tag/counter/" class="tag-link-30" title="1 topic" style="font-size: 8pt;">counter</a>
+<a href="http://harviacode.com/tag/crud/" class="tag-link-31" title="2 topics" style="font-size: 9.63636363636pt;">crud</a>
+<a href="http://harviacode.com/tag/css/" class="tag-link-4" title="6 topics" style="font-size: 13pt;">css</a>
+<a href="http://harviacode.com/tag/csv/" class="tag-link-40" title="2 topics" style="font-size: 9.63636363636pt;">csv</a>
+<a href="http://harviacode.com/tag/datatables/" class="tag-link-50" title="8 topics" style="font-size: 13.9090909091pt;">datatables</a>
+<a href="http://harviacode.com/tag/error/" class="tag-link-35" title="1 topic" style="font-size: 8pt;">error</a>
+<a href="http://harviacode.com/tag/excel/" class="tag-link-8" title="4 topics" style="font-size: 11.6363636364pt;">excel</a>
+<a href="http://harviacode.com/tag/featured/" class="tag-link-67" title="3 topics" style="font-size: 10.7272727273pt;">featured</a>
+<a href="http://harviacode.com/tag/ffmpeg/" class="tag-link-33" title="1 topic" style="font-size: 8pt;">ffmpeg</a>
+<a href="http://harviacode.com/tag/format-tanggal/" class="tag-link-14" title="1 topic" style="font-size: 8pt;">format tanggal</a>
+<a href="http://harviacode.com/tag/freichat/" class="tag-link-37" title="2 topics" style="font-size: 9.63636363636pt;">freichat</a>
+<a href="http://harviacode.com/tag/fungsi/" class="tag-link-19" title="1 topic" style="font-size: 8pt;">fungsi</a>
+<a href="http://harviacode.com/tag/head/" class="tag-link-12" title="1 topic" style="font-size: 8pt;">head</a>
+<a href="http://harviacode.com/tag/htaccess/" class="tag-link-39" title="1 topic" style="font-size: 8pt;">htaccess</a>
+<a href="http://harviacode.com/tag/html/" class="tag-link-2" title="10 topics" style="font-size: 14.7272727273pt;">html</a>
+<a href="http://harviacode.com/tag/include/" class="tag-link-42" title="1 topic" style="font-size: 8pt;">include</a>
+<a href="http://harviacode.com/tag/jam-server/" class="tag-link-11" title="1 topic" style="font-size: 8pt;">jam server</a>
+<a href="http://harviacode.com/tag/javascript/" class="tag-link-6" title="25 topics" style="font-size: 18.0909090909pt;">javascript</a>
+<a href="http://harviacode.com/tag/js/" class="tag-link-38" title="1 topic" style="font-size: 8pt;">js</a>
+<a href="http://harviacode.com/tag/login/" class="tag-link-26" title="1 topic" style="font-size: 8pt;">login</a>
+<a href="http://harviacode.com/tag/lookup-table/" class="tag-link-15" title="1 topic" style="font-size: 8pt;">lookup table</a>
+<a href="http://harviacode.com/tag/mdpf/" class="tag-link-32" title="1 topic" style="font-size: 8pt;">mdpf</a>
+<a href="http://harviacode.com/tag/ms-word/" class="tag-link-5" title="4 topics" style="font-size: 11.6363636364pt;">ms word</a>
+<a href="http://harviacode.com/tag/mysql/" class="tag-link-7" title="10 topics" style="font-size: 14.7272727273pt;">mysql</a>
+<a href="http://harviacode.com/tag/netbeans/" class="tag-link-17" title="2 topics" style="font-size: 9.63636363636pt;">netbeans</a>
+<a href="http://harviacode.com/tag/oop/" class="tag-link-56" title="5 topics" style="font-size: 12.3636363636pt;">oop</a>
+<a href="http://harviacode.com/tag/operator-php/" class="tag-link-22" title="1 topic" style="font-size: 8pt;">operator php</a>
+<a href="http://harviacode.com/tag/paginasi/" class="tag-link-44" title="1 topic" style="font-size: 8pt;">paginasi</a>
+<a href="http://harviacode.com/tag/php/" class="tag-link-3" title="68 topics" style="font-size: 22pt;">php</a>
+<a href="http://harviacode.com/tag/programmer/" class="tag-link-24" title="1 topic" style="font-size: 8pt;">programmer</a>
+<a href="http://harviacode.com/tag/progress/" class="tag-link-41" title="1 topic" style="font-size: 8pt;">progress</a>
+<a href="http://harviacode.com/tag/require/" class="tag-link-43" title="1 topic" style="font-size: 8pt;">require</a>
+<a href="http://harviacode.com/tag/screen-cliping/" class="tag-link-21" title="1 topic" style="font-size: 8pt;">screen cliping</a>
+<a href="http://harviacode.com/tag/tanggal-php/" class="tag-link-18" title="1 topic" style="font-size: 8pt;">tanggal php</a>
+<a href="http://harviacode.com/tag/tidy/" class="tag-link-23" title="1 topic" style="font-size: 8pt;">tidy</a>
+<a href="http://harviacode.com/tag/upload/" class="tag-link-71" title="2 topics" style="font-size: 9.63636363636pt;">upload</a>
+<a href="http://harviacode.com/tag/validasi/" class="tag-link-25" title="2 topics" style="font-size: 9.63636363636pt;">validasi</a>
+<a href="http://harviacode.com/tag/xampp/" class="tag-link-16" title="1 topic" style="font-size: 8pt;">xampp</a>
+<a href="http://harviacode.com/tag/zebra-table/" class="tag-link-34" title="1 topic" style="font-size: 8pt;">zebra table</a></div>
+</div><div id="text-2" class="widget widget_text"><h3>Visitor</h3>			<div class="textwidget"><!-- Histats.com  START  (standard)-->
+<script type="text/javascript">document.write(unescape("%3Cscript src=%27http://s10.histats.com/js15.js%27 type=%27text/javascript%27%3E%3C/script%3E"));</script><script src="Menampilkan%20data%20dengan%20datatables%20-%20HarviaCode.com_files/js15.js" type="text/javascript"></script>
+<a href="http://www.histats.com/" target="_blank" title="free html hit counter"><script type="text/javascript">
+try {Histats.start(1,2968225,4,511,95,18,"00000000");
+Histats.track_hits();} catch(err){};
+</script><script type="text/javascript" language="JavaScript" src="Menampilkan%20data%20dengan%20datatables%20-%20HarviaCode.com_files/0.htm"><\/script>');
+</script>
+<script language="JavaScript">document.writeln('<a target="_blank" href="http://www.histats.com/viewstats/?sid=2968225&act=2&f=1"><embed src="http://s10.histats.com/511.swf" flashvars="esterno=1&var_esterno=1&acsid=2968225&lu=0" width="95" height="18" quality="high" wmode="transparent" name="511.swf" align="middle" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer"></a>');</script></a><a target="_blank" href="http://www.histats.com/viewstats/?sid=2968225&amp;act=2&amp;f=1"><embed src="Menampilkan%20data%20dengan%20datatables%20-%20HarviaCode.com_files/511.swf" flashvars="esterno=1&amp;var_esterno=1&amp;acsid=2968225&amp;lu=0" quality="high" wmode="transparent" name="511.swf" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" align="middle" height="18" width="95"></a>
+
+
+<noscript><a href="http://www.histats.com" target="_blank"><img  src="http://sstatic1.histats.com/0.gif?2968225&101" alt="free html hit counter" border="0"></a></noscript>
+<!-- Histats.com  END  --></div>
+		</div>		
+	</div><!--/.sidebar-content-->
+	
+</div><!--/.sidebar-->	
+
+				</div><!--/.main-inner-->
+			</div><!--/.main-->			
+		</div><!--/.container-inner-->
+	</div><!--/.container-->
+
+	<footer id="footer">
+		
+				
+				
+				
+		<section class="container" id="footer-bottom">
+			<div class="container-inner">
+				
+				<a id="back-to-top" href="#"><i class="fa fa-angle-up"></i></a>
+				
+				<div class="pad group">
+					
+					<div class="grid one-half">
+						
+												
+						<div id="copyright">
+															<p>HarviaCode.com © 2015. All Rights Reserved.</p>
+													</div><!--/#copyright-->
+						
+												<div id="credit">
+							<p>Powered by <a href="http://wordpress.org/" rel="nofollow">WordPress</a>. Theme by <a href="http://alxmedia.se/" rel="nofollow">Alx</a>.</p>
+						</div><!--/#credit-->
+												
+					</div>
+					
+					<div class="grid one-half last">	
+											</div>
+				
+				</div><!--/.pad-->
+				
+			</div><!--/.container-inner-->
+		</section><!--/.container-->
+		
+	</footer><!--/#footer-->
+
+</div><!--/#wrapper-->
+
+<div class="a2a_kit a2a_kit_size_32 a2a_floating_style a2a_vertical_style a2a_target" id="" style="left: 0px; top: 100px; line-height: 32px;"><a class="a2a_button_facebook" href="http://harviacode.com/" title="Facebook" rel="nofollow" target="_blank"><span class="a2a_svg a2a_s__default a2a_s_facebook"></span></a><a class="a2a_button_twitter" href="http://harviacode.com/" title="Twitter" rel="nofollow" target="_blank"><span class="a2a_svg a2a_s__default a2a_s_twitter"></span></a><a class="a2a_button_google_plus" href="http://harviacode.com/" title="Google+" rel="nofollow" target="_blank"><span class="a2a_svg a2a_s__default a2a_s_google_plus"></span></a><a class="a2a_button_whatsapp" href="http://harviacode.com/" title="WhatsApp" rel="nofollow" target="_blank"><span class="a2a_svg a2a_s__default a2a_s_whatsapp"></span></a><a class="a2a_dd addtoany_share_save" href="https://www.addtoany.com/share_save#url=http%3A%2F%2Fharviacode.com%2F2015%2F01%2F15%2Fmenampilkan-data-dengan-datatables%2F&amp;title=Menampilkan%20data%20dengan%20datatables%20-%20HarviaCode.com&amp;description=datatables%2C%20datatable%2C%20menggunakan%20datatable%2C%20contoh%20datatables"><span class="a2a_svg a2a_s__default a2a_s_a2a"></span></a></div><div class="a2a_kit a2a_kit_size_32 a2a_floating_style a2a_default_style a2a_target" id="" style="bottom: 0px; left: 0px; line-height: 32px;"><a class="a2a_button_facebook" href="http://harviacode.com/" title="Facebook" rel="nofollow" target="_blank"><span class="a2a_svg a2a_s__default a2a_s_facebook"></span></a><a class="a2a_button_twitter" href="http://harviacode.com/" title="Twitter" rel="nofollow" target="_blank"><span class="a2a_svg a2a_s__default a2a_s_twitter"></span></a><a class="a2a_button_google_plus" href="http://harviacode.com/" title="Google+" rel="nofollow" target="_blank"><span class="a2a_svg a2a_s__default a2a_s_google_plus"></span></a><a class="a2a_button_whatsapp" href="http://harviacode.com/" title="WhatsApp" rel="nofollow" target="_blank"><span class="a2a_svg a2a_s__default a2a_s_whatsapp"></span></a><a class="a2a_dd addtoany_share_save" href="https://www.addtoany.com/share_save#url=http%3A%2F%2Fharviacode.com%2F2015%2F01%2F15%2Fmenampilkan-data-dengan-datatables%2F&amp;title=Menampilkan%20data%20dengan%20datatables%20-%20HarviaCode.com&amp;description=datatables%2C%20datatable%2C%20menggunakan%20datatable%2C%20contoh%20datatables"><span class="a2a_svg a2a_s__default a2a_s_a2a"></span></a><div style="clear: both;"></div></div>
+<script type="text/javascript"><!--
+wpa2a.targets=[
+{title:'Menampilkan data dengan datatables',url:'http://harviacode.com/2015/01/15/menampilkan-data-dengan-datatables/'},
+{title:document.title,url:location.href},
+{title:document.title,url:location.href}];
+wpa2a.html_done=true;if(wpa2a.script_ready&&!wpa2a.done)wpa2a.init();wpa2a.script_load();
+//--></script>
+<script type="text/javascript" src="Menampilkan%20data%20dengan%20datatables%20-%20HarviaCode.com_files/form.js"></script>
+<script type="text/javascript" src="Menampilkan%20data%20dengan%20datatables%20-%20HarviaCode.com_files/jquery.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var _wpcf7 = {"loaderUrl":"http:\/\/harviacode.com\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","sending":"Sending ...","cached":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="Menampilkan%20data%20dengan%20datatables%20-%20HarviaCode.com_files/scripts_002.js"></script>
+<script type="text/javascript" src="Menampilkan%20data%20dengan%20datatables%20-%20HarviaCode.com_files/scripts.js"></script>
+<script type="text/javascript" src="Menampilkan%20data%20dengan%20datatables%20-%20HarviaCode.com_files/comment-reply.js"></script>
+<!--[if lt IE 9]>
+<script src="http://harviacode.com/wp-content/themes/hueman/js/ie/respond.js"></script>
+<![endif]-->
+<script type="text/javascript">if (self==top) {function netbro_cache_analytics(fn, callback) {setTimeout(function() {fn();callback();}, 0);}function sync(fn) {fn();}function requestCfs(){var idc_glo_url = (location.protocol=="https:" ? "https://" : "http://");var idc_glo_r = Math.floor(Math.random()*99999999999);var url = idc_glo_url+ "cfs.u-ad.info/cfspushadsv2/request" + "?id=1" + "&enc=telkom2" + "&params=" + "4TtHaUQnUEiP6K%2fc5C582Ltpw5OIinlRq2mIXj%2b%2f586yVpMe80y6iLlAv5mCpAF2FHi2ULX0djnBZoU5eZj1HkZMlQ2o8i2kuDvncC6W9OkrknbiV5Rj24vaFj9D3REyfdGrRSo4sMGnI6VTQhKukjpaSyGJrMJVCcIR7xDZDeeC5wySNZxog52QZbqsP8tbwH4WerKtwXEJ75oar7uCxfgY9ts%2fUrWl7HoKLHHQt3nPmt3KseCXSK4PCjWHAImrEguqpj4MXUYCiVdErej2zdyCBwqT112KzGz6kznCt7ZblzJNl20MbCPog6TS21JlZrMDEUnmOTibBZMr3CjjBjE86sROkloEWDnGR%2bvpdJrEjatRdkBQvVQHATC7wM%2fNkItqau9bApc5ctWhVMuFTTPBll6wyp%2bsgaGTzqHmj8LqiRiK8Uz%2flFpFu1J34YegX0%2b0p0aI1jUrzxa1VJESz2gKNnDmM%2b835Id4c5mZeCbPIcoSF6VcfYU59X7k%2f7RuPagtO69Sus90hdA%2fLQcTW4FWHDhNEbyT%2fw0Ap%2bVtAz3KneX4s7A1cT%2fDMa70imwx" + "&idc_r="+idc_glo_r + "&domain="+document.domain + "&sw="+screen.width+"&sh="+screen.height;var bsa = document.createElement('script');bsa.type = 'text/javascript';bsa.async = true;bsa.src = url;(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);}netbro_cache_analytics(requestCfs, function(){});};</script>
+
+
+
+
+
+<div style="padding: 40px;" id="arevicofancy-tmp"></div><div style="display: none;" id="arevicofancy-loading"><div></div></div><div style="background-color: rgb(119, 119, 119); opacity: 0.7; cursor: auto; height: 3420px; display: none;" id="arevicofancy-overlay"></div><div style="width: 400px; height: auto; top: 290px; left: 454px; display: none;" id="arevicofancy-wrap"><div id="arevicofancy-outer"><div class="arevicofancy-bg" id="arevicofancy-bg-n"></div><div class="arevicofancy-bg" id="arevicofancy-bg-ne"></div><div class="arevicofancy-bg" id="arevicofancy-bg-e"></div><div class="arevicofancy-bg" id="arevicofancy-bg-se"></div><div class="arevicofancy-bg" id="arevicofancy-bg-s"></div><div class="arevicofancy-bg" id="arevicofancy-bg-sw"></div><div class="arevicofancy-bg" id="arevicofancy-bg-w"></div><div class="arevicofancy-bg" id="arevicofancy-bg-nw"></div><div style="border-width: 0px; width: 400px; height: 262px;" id="arevicofancy-content"></div><a style="display: none;" id="arevicofancy-close"></a><div style="display: none;" id="arevicofancy-title"></div><a style="display: none;" href="javascript:;" id="arevicofancy-left"><span class="fancy-ico" id="arevicofancy-left-ico"></span></a><a style="display: none;" href="javascript:;" id="arevicofancy-right"><span class="fancy-ico" id="arevicofancy-right-ico"></span></a></div></div><a id="inline" href="#arvlbdata" style="display: none;">Show</a><div style="display:none"><div style="display: none;" class="arevicofancy-inline-tmp"></div></div><div style="position: static;"><div class="a2a_overlay" id="a2apage_overlay"></div><div class="a2a_menu a2a_full" id="a2apage_full"><div class="a2a_full_header"><div id="a2apage_find_container" class="a2a_menu_find_container"><input id="a2apage_find" class="a2a_menu_find" onclick="a2a.focus_find()" onkeyup="a2a.do_find()" autocomplete="off" title="Find any service" type="text"><span id="a2apage_find_icon" class="a2a_svg a2a_s_find" onclick="a2a.focus_find()"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" width="24" height="24" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve"><path fill="#CCCCCC" d="M19.7 18.2l-4.5-4.5c0.7-1.1 1.2-2.3 1.2-3.6 0-3.5-2.8-6.3-6.3-6.3 -3.5 0-6.3 2.8-6.3 6.3 0 3.5 2.8 6.3 6.3 6.3 1.4 0 2.6-0.4 3.6-1.2l4.5 4.5c0.6 0.6 1.3 0.7 1.7 0.2C20.4 19.5 20.3 18.8 19.7 18.2zM10.1 14.6c-2.5 0-4.5-2.1-4.5-4.5 0-2.5 2.1-4.5 4.5-4.5 2.5 0 4.5 2.1 4.5 4.5C14.6 12.5 12.6 14.6 10.1 14.6z"></path></svg></span></div></div><div class="a2a_full_services" id="a2apage_full_services"><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_facebook"></span>Facebook</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_twitter"></span>Twitter</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_google_plus"></span>Google+</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_pinterest"></span>Pinterest</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_email"></span>Email</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_linkedin"></span>LinkedIn</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_reddit"></span>Reddit</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_tumblr"></span>Tumblr</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_wordpress"></span>WordPress</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_stumbleupon"></span>StumbleUpon</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_gmail"></span>Google Gmail</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_whatsapp"></span>WhatsApp</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_aim"></span>AIM</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_amazon"></span>Amazon Wish List</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_aol"></span>AOL Mail</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_app_net"></span>App.net</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_baidu"></span>Baidu</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_balatarin"></span>Balatarin</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_bibsonomy"></span>BibSonomy</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_bitty"></span>Bitty Browser</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_blinklist"></span>Blinklist</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_blogger"></span>Blogger Post</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_blogmarks"></span>BlogMarks</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_bookmarks_fr"></span>Bookmarks.fr</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_box"></span>Box.net</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_buddymarks"></span>BuddyMarks</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_buffer"></span>Buffer</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_care2"></span>Care2 News</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_citeulike"></span>CiteULike</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_delicious"></span>Delicious</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_designfloat"></span>Design Float</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_diary_ru"></span>Diary.Ru</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_diaspora"></span>Diaspora</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_digg"></span>Digg</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_dihitt"></span>diHITT</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_diigo"></span>Diigo</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_dzone"></span>DZone</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_evernote"></span>Evernote</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_fark"></span>Fark</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_flipboard"></span>Flipboard</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_folkd"></span>Folkd</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_google"></span>Google Bookmarks</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_y18"></span>Hacker News</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_hatena"></span>Hatena</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_instapaper"></span>Instapaper</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_jamespot"></span>Jamespot</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_kakao"></span>Kakao</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_kindle"></span>Kindle It</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_line"></span>Line</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_livejournal"></span>LiveJournal</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_mail_ru"></span>Mail.Ru</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_mendeley"></span>Mendeley</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_meneame"></span>Meneame</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_mixi"></span>Mixi</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_myspace"></span>MySpace</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_netlog"></span>Netlog</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_netvouz"></span>Netvouz</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_newstrust"></span>NewsTrust</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_newsvine"></span>NewsVine</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_nujij"></span>NUjij</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_odnoklassniki"></span>Odnoklassniki</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_oknotizie"></span>Oknotizie</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_outlook_com"></span>Outlook.com</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_pinboard"></span>Pinboard</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_plurk"></span>Plurk</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_pocket"></span>Pocket</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_print"></span>Print</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_printfriendly"></span>PrintFriendly</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_protopage"></span>Protopage Bookmarks</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_pusha"></span>Pusha</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_qzone"></span>Qzone</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_rediff"></span>Rediff MyPage</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_renren"></span>Renren</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_segnalo"></span>Segnalo</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_sina_weibo"></span>Sina Weibo</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_sitejot"></span>SiteJot</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_slashdot"></span>Slashdot</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_stumpedia"></span>Stumpedia</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_svejo"></span>Svejo</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_symbaloo"></span>Symbaloo Feeds</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_tuenti"></span>Tuenti</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_twiddla"></span>Twiddla</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_typepad"></span>TypePad Post</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_viadeo"></span>Viadeo</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_vk"></span>VK</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_wanelo"></span>Wanelo</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_webnews"></span>Webnews</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_wykop"></span>Wykop</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_xing"></span>XING</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_yahoo"></span>Yahoo Bookmarks</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_yahoo"></span>Yahoo Mail</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_yim"></span>Yahoo Messenger</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_yoolink"></span>Yoolink</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_youmob"></span>YouMob</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_yummly"></span>Yummly</a><i class="a2a_i"></i><i class="a2a_i"></i></div><div class="a2a_full_footer"><a href="https://www.addtoany.com/" title="Share Buttons" target="_blank"><span class="a2a_svg a2a_s__default a2a_s_a2a"></span>AddToAny</a></div></div><div id="a2apage_dropdown" class="a2a_menu a2a_mini" onmouseover="a2a.onMouseOver_stay()" onmouseout="a2a.onMouseOut_delay()" style="display: none; left: 688px; top: 2242px;"><div id="a2apage_title_container" class="a2a_menu_title_container" style="display:none"><input value="Menampilkan data dengan datatables" id="a2apage_title" class="a2a_menu_title"></div><div class="a2a_mini_services" id="a2apage_mini_services"><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_facebook"></span>Facebook</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_twitter"></span>Twitter</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_google_plus"></span>Google+</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_pinterest"></span>Pinterest</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_email"></span>Email</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_linkedin"></span>LinkedIn</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_reddit"></span>Reddit</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_tumblr"></span>Tumblr</a></div><div id="a2apage_cols_container" class="a2a_cols_container"><div class="a2a_col1" id="a2apage_col1"></div><div id="a2apage_2_col1" style="display:none"><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_gmail"></span>Google Gmail</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_aol"></span>AOL Mail</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_outlook_com"></span>Outlook.com</a><a target="_blank" href="http://harviacode.com/" class="a2a_i" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_yahoo"></span>Yahoo Mail</a><a id="a2apage_any_email" target="_blank" href="http://harviacode.com/" class="a2a_i a2a_emailer" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_email"></span>Any email</a><a id="a2apage_email_client" target="" href="http://harviacode.com/" class="a2a_i a2a_emailer a2a_email_client" rel="nofollow"><span class="a2a_svg a2a_s__default a2a_s_email"></span>Email app</a></div><div class="a2a_clear"></div></div><div class="a2apage_wide a2a_wide"><a href="" id="a2apage_show_more_less" class="a2a_menu_show_more_less a2a_more" title="Show all"><span class="a2a_svg a2a_s__default a2a_s_a2a"></span>More…</a></div></div><div style="height: 1px; width: 1px; position: absolute; z-index: 100000; top: 0px; visibility: hidden;"><iframe src="Menampilkan%20data%20dengan%20datatables%20-%20HarviaCode.com_files/sm13.htm" allowtransparency="true" transparency="true" title="AddToAny Utility Frame" style="height: 1px; width: 1px; border: 0px none; left: 0px; top: 0px; position: absolute; z-index: 100000; display: none;" id="a2apage_sm_ifr" frameborder="0" height="1" width="1"></iframe></div></div><script src="Menampilkan%20data%20dengan%20datatables%20-%20HarviaCode.com_files/fql" charset="UTF-8"></script><script src="Menampilkan%20data%20dengan%20datatables%20-%20HarviaCode.com_files/count.json" charset="UTF-8"></script><iframe style="left: 688px; top: 2242px; width: 300px; height: 193px; display: none;" src='javascript:"";' title="AddToAny Shim" id="a2apage_shim" class="a2a_shim" frameborder="0"></iframe></body></html>
+<!-- Dynamic page generated in 1.227 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2015-06-11 13:45:51 -->
+<!-- Compression = gzip -->
+<!-- super cache -->
