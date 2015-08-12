@@ -122,21 +122,22 @@ class C_slide extends CI_Controller {
 			 	move_uploaded_file($tmp_gambar, "assets_bs/images/slider/$nama_gambar");
 			 	$tgl=date("d/m/Y");
 			 	$data=array(
-			 		'ID_SLIDE'=>$this->input->post('id_berita'),
-			 		'NAMA'=>$this->input->post('judul'),
-			 		'GAMBAR'=>$this->$nama_gambar,
+			 		'ID_SLIDE'=>$this->input->post('id_slide'),
+			 		'NAMA'=>$this->input->post('nama'),
+			 		'GAMBAR'=>$nama_gambar,
+			 		'KET'=>$this->input->post('ket'),
 			 		'TGL'=>$this->input->post('tgl'),
-			 		'KET'=>$this->input->post('ket')
+			 	
 			 		
 			 	);
 			 }
 			 	
 				$this->m_berita->update_data($id,$data);
 				$data['success']=1;
-				redirect(base_url().'index.php/c_berita/');
+				redirect(base_url().'index.php/c_slide/');
 			}else{
 				$data['a']=$this->m_berita->get_dataid($id);
-				$this->load->view('admin/update_berita',$data);
+				$this->load->view('admin/update_slide',$data);
 			}
 	}
 
@@ -152,7 +153,7 @@ class C_slide extends CI_Controller {
 			 	
 				$this->m_slide->delete_data($id,$data);
 				$data['success']=1;
-				redirect(base_url().'index.php/C_slide/');
+				redirect(base_url().'index.php/c_slide/');
 			
 	}
 
