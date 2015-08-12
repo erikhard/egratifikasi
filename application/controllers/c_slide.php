@@ -132,11 +132,11 @@ class C_slide extends CI_Controller {
 			 	);
 			 }
 			 	
-				$this->m_berita->update_data($id,$data);
+				$this->m_slide->update_data($id,$data);
 				$data['success']=1;
 				redirect(base_url().'index.php/c_slide/');
 			}else{
-				$data['a']=$this->m_berita->get_dataid($id);
+				$data['a']=$this->m_slide->get_dataid($id);
 				$this->load->view('admin/update_slide',$data);
 			}
 	}
@@ -150,7 +150,6 @@ class C_slide extends CI_Controller {
 			 		
 			 	);
 			
-			 	
 				$this->m_slide->delete_data($id,$data);
 				$data['success']=1;
 				redirect(base_url().'index.php/c_slide/');
