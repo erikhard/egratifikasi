@@ -296,32 +296,15 @@
                             <div class="team-member modern">
                                 <!-- Memebr Photo, Name & Position -->
                                 <div class="member-photo">
-                                    <a href="#modalber<?php echo $val['ID_BERITA'] ?>" data-toggle="modal" >
-                                    <img alt="" src="<?php echo base_url('assets_bs/images/team/'.$val['PIC'].'')?>" />
-                                    <div class="member-name"><?php echo $val['JUDUL'] ?> <span></span></div>
-                                    <div class="member-name"><?php // echo anchor_popup(base_url().'index.php/c_portalslide/tampilpop/'.$val['ID_BERITA'], $val['JUDUL'] ,$atribut_popup)?></div>
-                                    <!--<input type="button" value="<?php echo $val['JUDUL'] ?>" onclick="wpopup('5')" class="member-name">-->
-                                    </a>
                                     
+                                    <a href=""><img alt="" src="<?php echo base_url('assets_bs/images/team/'.$val['PIC'].'')?>" /></a>
+                                    <div class="member-name"><?php //echo $val['JUDUL'] ?> <span></span>
+                                    <div class="member-name"><?php echo anchor_popup(base_url().'index.php/c_portalslide/tampilpop/'.$val['ID_BERITA'], $val['JUDUL'] ,$atribut_popup)?></div>
+                                    <!--<input type="button" value="<?php echo $val['JUDUL'] ?>" onclick="wpopup('5')" class="member-name">-->
+                                    </div>
                                 </div>
                                 <!-- Memebr Words -->
-                                <div id="modalber<?php echo $val['ID_BERITA'] ?>" class="modal fade in" aria-hidden="false">
-                                    <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                            <h4 class="modal-title">Berita Kami</h4>
-                                        </div>
-                                        <div class="modal-body">
-                                            <!--isi konten-->
-                                            <p><?php echo $val['BERITA'] ?></p>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-default" data-dismiss="modal">CLose</button>
-                                        </div>
-                                    </div>        
-                                </div>
-                                </div>
+                                
                             </div>
                         </div>
                         <!-- End Memebr 1 -->
