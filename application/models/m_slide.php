@@ -4,7 +4,7 @@
 		
 		function get_data()
 		{
-			$this->db->select()->from('GRAT_SLIDER')->where(array('IS_DELETED' => 'true' ));
+			$this->db->select()->from('GRAT_SLIDER')->where(array('IS_DELETED'=>'true'));
 			$query=$this->db->get();
 			return $query->result_array();
 			// $query="SELECT * FROM GRAT_SLIDER where IS_DELETED = 'true'";

@@ -9,7 +9,7 @@ class C_portalslide extends CI_Controller {
 			$gallery_path_url;
 
 			parent::__construct();
- 			$this->load->model('m_portalslide');
+ 			$this->load->model('m_slide');
  			$this->load->model('m_berita');
  			$this->gallery_path=realpath(APPPATH.'../../assets_bs/images/slider/');
  			$this->gallery_path_url=base_url().'assets_bs/images/slider/';
@@ -23,7 +23,7 @@ class C_portalslide extends CI_Controller {
 
 	public function index(){
 		 $data['news']=$this->m_berita->get_data();
-		 $data['berita']=$this->m_portalslide->get_data();
+		 $data['berita']=$this->m_slide->get_data();
 		 $this->load->view('portal',$data);
 		//$this->load->view('tampilhome');
 	}
@@ -70,7 +70,7 @@ class C_portalslide extends CI_Controller {
 			 		'KET'=>$this->input->post('ket')
 			 		
 			 	);
-			 	$result = $this->m_portalslide->tambah_data($data);
+			 	$result = $this->m_slide->tambah_data($data);
 				// if($result) {
 				// 	$data['result']="<div class='success' style='width:300px'>Produk berhasil ditambahkan</div>";
 				// } else {

@@ -57,14 +57,14 @@ class C_slide extends CI_Controller {
 				
 			 		$tmp_gambar = $_FILES["pic"]["tmp_name"];
 			 	$nama_gambar = "BRT".date("YmdHis").".png";
-			 	move_uploaded_file($tmp_gambar, "assets_bs/images/team/$nama_gambar");
+			 	move_uploaded_file($tmp_gambar, "assets_bs/images/slider/$nama_gambar");
 			 	$tgl=date("d/m/Y");
 			 	$data=array(
-			 		'ID_BERITA'=>$this->input->post('id_slide'),
-			 		'JUDUL'=>$this->input->post('nama'),
-			 		'PIC'=>$nama_gambar,
-			 		'TGL'=>$this->input->post('tgl'),
+			 		'ID_SLIDE'=>$this->input->post('id_slide'),
+			 		'NAMA'=>$this->input->post('nama'),
+			 		'GAMBAR'=>$nama_gambar,
 			 		'KET'=>$this->input->post('ket'),
+			 		'TGL'=>$this->input->post('tgl'),
 			 		'IS_DELETED'=>'true'
 			 		
 			 	);
@@ -119,13 +119,12 @@ class C_slide extends CI_Controller {
 				
 			 		$tmp_gambar = $_FILES["pic"]["tmp_name"];
 			 	$nama_gambar = "BRT".date("YmdHis").".png";
-			 	move_uploaded_file($tmp_gambar, "assets_bs/images/team/$nama_gambar");
+			 	move_uploaded_file($tmp_gambar, "assets_bs/images/slider/$nama_gambar");
 			 	$tgl=date("d/m/Y");
 			 	$data=array(
-			 		'ID_BERITA'=>$this->input->post('id_berita'),
-			 		'JUDUL'=>$this->input->post('judul'),
-			 		'BERITA'=>$this->input->post('berita'),
-			 		'PIC'=>$nama_gambar,
+			 		'ID_SLIDE'=>$this->input->post('id_berita'),
+			 		'NAMA'=>$this->input->post('judul'),
+			 		'GAMBAR'=>$this->$nama_gambar,
 			 		'TGL'=>$this->input->post('tgl'),
 			 		'KET'=>$this->input->post('ket')
 			 		
@@ -151,9 +150,9 @@ class C_slide extends CI_Controller {
 			 	);
 			
 			 	
-				$this->m_berita->delete_data($id,$data);
+				$this->m_slide->delete_data($id,$data);
 				$data['success']=1;
-				redirect(base_url().'index.php/c_berita/');
+				redirect(base_url().'index.php/C_slide/');
 			
 	}
 
