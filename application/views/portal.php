@@ -175,9 +175,9 @@
                                   <span><?php echo $key['NAMA']; ?></span>
                                 </h2>
                                 <h3 class="animated3 white">
-                                    <span>PT PELABUHAN INDONESIA III (PERSERO)</span>
+                                    <span></span>
                                 </h3>
-                                <p class="animated4"><a href="#" class="slider btn btn-primary">Check Now</a>
+                                <p class="animated4">
                                 </p>
                             </div>
                         </div>
