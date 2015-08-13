@@ -2779,7 +2779,7 @@ ul.icons-list li i {
 }
 
 .team-member.modern:hover .member-photo:after {
-	opacity: 0.5;
+	opacity: 0;
 	width: 100%;
     height: 100%;
 }
