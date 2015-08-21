@@ -24,7 +24,10 @@ class AdmPortal extends CI_Controller {
 	public function index(){
 		 // $data['admnews']=$this->m_berita->get_data();
 		 // $data['admslide']=$this->m_portalslide->get_data();
-		 $this->load->view('admin/indexadmin');
+		 $this->load->view('admin/navbar_menu');
+		 $this->load->view('admin/header_menu');
+		 $this->load->view('admin/admin');
+		 $this->load->view('admin/footer_menu');
 		//$this->load->view('tampilhome');
 	}
 

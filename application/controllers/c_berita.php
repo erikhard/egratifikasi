@@ -17,12 +17,17 @@ class C_berita extends CI_Controller {
             	redirect('login');
         	}*/
         	$this->load->helper(array('url','html','form'));
+        	
  		}
  
 
 	public function index(){
 		 $data['admnews']=$this->m_berita->get_data();
+		 $this->load->view('admin/navbar_menu');
+		 $this->load->view('admin/header_menu');
 		 $this->load->view('admin/list_berita',$data);
+		 $this->load->view('admin/footer_menu');
+		 
 		//$this->load->view('tampilhome');
 	}
 
@@ -32,9 +37,18 @@ class C_berita extends CI_Controller {
 		//$this->load->view('tampilhome');
 	}
 
-
+	// function _set_rules(){
+	// 	$rules['id_berita']='trim|required|numeric';
+	// 	$rules['judul']='trim|required';
+	// 	$this->validation->set_rules($rules);
+	// 	$this->validation->set_message('required','* harus diisi');
+	// 	$this->validation->set_message('numeric','* hanya boleh diisi dengan angka');
+	// }
 	public function insert_berita(){
+		$this->load->library('form_validation');
+		//$this->_set_rules();
 		if($_POST){
+			if($this->validation->run()==TRUE){
 			// $data=array(
 			// 	'ID_SLIDE'=>$this->input->post('id_slide'), 
 			// 	'NAMA'=>$this->input->post('nama'), 
@@ -48,13 +62,13 @@ class C_berita extends CI_Controller {
 			$nama_gambar = $_FILES['pic']['name'];
 			$jenis_gambar = $_FILES['pic']['type'];
 			$ukuran_gambar = $_FILES['pic']['size'];
-			if(empty($nama_gambar)) {
-				$data['result'] = "<div class='failed'>Pilih gambar</div>";
-			 } elseif($jenis_gambar != "image/jpg" && $jenis_gambar != "image/gif" && $jenis_gambar != "image/jpeg" && $jenis_gambar  != "image/png" && $jenis_gambar  != "image/pjpeg" && $jenis_gambar  != "image/bmp") {
-			 	$data['result'] = "<div class='failed'>File harus berupa gambar</div>";
-			 } elseif($ukuran_gambar>100000000) {
-			 	$data['result'] = "<div class='failed'>Ukuran gambar tidak boleh melebihi 1 MB</div>";
-			 } else {
+			// if(empty($nama_gambar)) {
+			// 	$data['result'] = "<div class='failed'>Pilih gambar</div>";
+			//  } elseif($jenis_gambar != "image/jpg" && $jenis_gambar != "image/gif" && $jenis_gambar != "image/jpeg" && $jenis_gambar  != "image/png" && $jenis_gambar  != "image/pjpeg" && $jenis_gambar  != "image/bmp") {
+			//  	$data['result'] = "<div class='failed'>File harus berupa gambar</div>";
+			//  } elseif($ukuran_gambar>100000000) {
+			//  	$data['result'] = "<div class='failed'>Ukuran gambar tidak boleh melebihi 1 MB</div>";
+			//  } else {
 				
 			 		$tmp_gambar = $_FILES["pic"]["tmp_name"];
 			 	$nama_gambar = "BRT".date("YmdHis").".png";
@@ -98,9 +112,14 @@ class C_berita extends CI_Controller {
 			//  		'TGL'=>$this->input->post('tgl')
 			//  	);
 			//  	$this->m_portalslide->tambah_data($data);
-			}
+			//}
+			 	
+			 }
 		}else{
+			$this->load->view('admin/navbar_menu');
+		 	$this->load->view('admin/header_menu');
 			$this->load->view('insert_berita');
+			$this->load->view('admin/footer_menu');
 		}
 	}
 
@@ -139,7 +158,10 @@ class C_berita extends CI_Controller {
 				redirect(base_url().'index.php/c_berita/');
 			}else{
 				$data['a']=$this->m_berita->get_dataid($id);
+				$this->load->view('admin/navbar_menu');
+		 		$this->load->view('admin/header_menu');
 				$this->load->view('admin/update_berita',$data);
+				$this->load->view('admin/footer_menu');
 			}
 	}
 

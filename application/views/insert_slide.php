@@ -24,7 +24,7 @@
             </div>
             <div class="form-group">
               <label for="">GAMBAR</label>
-              <input type="file" name="pic" class="form-control" id="" placeholder="Input Gambar">
+              <input type="file" name="pic" class="form-control" id="" placeholder="Input Gambar"><span style="color:red;">*File gambar harus  1440 X 500 px</span>
             </div>
             <div class="form-group">
               <label for="">TANGGAL</label>

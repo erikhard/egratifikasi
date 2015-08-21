@@ -2437,8 +2437,9 @@ table th[class*="col-"] {
 .table-responsive {
   min-height: .01%;
   overflow-x: auto;
+  padding-right: 20px;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1000px) {
   .table-responsive {
     width: 100%;
     margin-bottom: 15px;
@@ -2449,6 +2450,7 @@ table th[class*="col-"] {
   .table-responsive > .table {
     margin-bottom: 0;
   }
+  
   .table-responsive > .table > thead > tr > th,
   .table-responsive > .table > tbody > tr > th,
   .table-responsive > .table > tfoot > tr > th,
